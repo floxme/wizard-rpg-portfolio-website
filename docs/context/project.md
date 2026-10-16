@@ -8,10 +8,10 @@ Stand: 16.10.2026. Phase 00 ist technisch initialisiert; der folgende Releaseumf
 
 | Zustand                                        | Umfang                                                                                                                                                              |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Implementiert und im benannten Umfang getestet | Minimales Next.js-/React-Grundgerüst, npm-Lockfile, TypeScript/Tailwind/ESLint/Prettier; statischer Export der drei Einstiegspunkte und lokale CLI-/HTTP-Prüfungen. |
-| Implementiert, noch nicht vollständig getestet | Sprachwahl und HTML-Platzhalter unter `/`, `/de-DE/` und `/en-EN/`; echte Browser-, Tastatur-, Zoom- und responsive Abnahme steht aus.                              |
+| Implementiert und im benannten Umfang getestet | Minimales Next.js-/React-Grundgerüst, npm-Lockfile, TypeScript/Tailwind/ESLint/Prettier; statischer Export der drei Einstiegspunkte, lokale CLI-/HTTP-Prüfungen und erneut erfolgreiche Qualitätsprüfungen im nativen Ubuntu-Checkout. |
+| Implementiert, noch nicht vollständig getestet | Sprachwahl und HTML-Platzhalter unter `/`, `/de-DE/` und `/en-EN/`; Browserdarstellung laut Florian erfolgreich, vollständige Browser-, Tastatur-, Zoom-, Accessibility- und responsive Abnahme steht aus.                              |
 | Beschlossen, nicht implementiert               | Vier vollständige Portfolio-Hauptbereiche, Inhaltsmodell, 3D-Welt und die nachfolgend beschriebenen Releasefunktionen.                                              |
-| Geplant oder offen                             | Git-Sicherung durch Florian, Umzug auf natives Ubuntu-Dateisystem, erneute Umgebungsprüfung und priorisierte ESLint-10-Migration nach erfüllten Bedingungen.        |
+| Geplant oder offen                             | Nächster Commit durch Florian, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen und priorisierte ESLint-10-Migration nach erfüllten Bedingungen.        |
 
 Alle derzeit sichtbaren Inhalte sind Entwicklungsplatzhalter. Root bietet noch keinen funktionierenden Welt-Einstieg, keine gespeicherte Sprachpräferenz oder Einstellungen; die fachlichen Anforderungen bleiben erhalten. Nachweise und offene Prüfungen: [open-items.md](../development/open-items.md). Der Installations-/Startablauf steht in der [Root-README](../../README.md).
 
@@ -25,7 +25,7 @@ Alle derzeit sichtbaren Inhalte sind Entwicklungsplatzhalter. Root bietet noch k
 - Minimap, freiwillige Aufgaben, lokale Einstellungen, Qualitätsregelung und reduzierte Bewegung.
 - HP/Mana rein dekorativ im Prototyp, keine Skill-Actionbar oder abgeleiteten Ressourcenmechaniken.
 - Audio bei Erstbesuch aus; Musik und Effekte getrennt regelbar.
-- Lokale Inhalte, kein Konto, Backend, Datenbank, Admin oder Tracking. Privates Repository, öffentliches Portfolio als Ziel.
+- Lokale Inhalte, kein Konto, Backend, Datenbank, Admin oder Tracking. Laut Florian öffentliches GitHub-Repository; öffentliches Portfolio als Ziel.
 - The Arcane Tower ist das erste persönliche Projekt; keine erfundenen Füllprojekte.
 
 ## Vorgehen

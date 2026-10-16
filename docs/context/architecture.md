@@ -38,16 +38,20 @@ Vorhanden sind `src/app/` mit zwei Root-Layouts, `src/components/entry-frame.tsx
 
 Three.js, React Three Fiber, Drei und GSAP sind beschlossen, aber nicht installiert oder integriert. Deren konkrete spätere Versionen und Peer-Abhängigkeiten vor Einbindung erneut prüfen. Fiber 9 ist der React-19-Zweig; dies ersetzt keinen Integrationstest.
 
-## Shared Folder und geplanter Ubuntu-Umzug
+## Nativer Ubuntu-Checkout und historische Shared-Folder-Probleme
 
-Die Initialisierung erfolgte unter einem VirtualBox Shared Folder (`/media/sf_KI-Workspace/…`). Beobachtete Einschränkungen und derzeitige Workarounds:
+Der aktive Entwicklungscheckout liegt jetzt auf einem nativen Linux-Dateisystem unter Ubuntu, nicht auf `vboxsf`. Arbeitsort und Branch `dev` wurden in der Abschlusssitzung erneut geprüft; persönliche absolute Verzeichnis- und Mountpfade werden nicht dokumentiert.
 
-- npm-Symlinks scheiterten mit `EPERM`. `.npmrc` setzt deshalb `bin-links=false`; die npm-Skripte verwenden direkte lokale Node-CLI-Pfade.
-- Der persistente Turbopack-Dateisystem-Cache scheiterte beim Verzeichnis-Sync mit `EINVAL`. `next.config.ts` setzt `experimental.turbopackFileSystemCacheForDev` und `experimental.turbopackFileSystemCacheForBuild` auf `false`. Der Produktionsbuild gelang damit.
+Die Initialisierung erfolgte zuvor in einem VirtualBox Shared Folder. Historisch beobachtet wurden:
 
-Beide Anpassungen bleiben zunächst bestehen. Keine VirtualBox- oder Anwendungskonfiguration im Dokumentationsabschluss ändern. Nach Sicherung des Projekts in Git soll das aktive Entwicklungsrepository auf das native Ubuntu-Dateisystem umziehen. Dort frische Installation, lokalen Start, Build/Export, Dateisystemkompatibilität und Performance erneut prüfen; erst anhand dieser Nachweise über die weitere Notwendigkeit der Workarounds entscheiden. Nach Möglichkeit auch die echte Browserabnahme dort durchführen. Umzug und Vergleichsmessung sind noch nicht erfolgt.
+- npm-Symlinks scheiterten mit `EPERM`; der damalige Workaround war `bin-links=false` in `.npmrc`.
+- Der persistente Turbopack-Dateisystem-Cache scheiterte beim Verzeichnis-Sync mit `EINVAL`; damals wurden `experimental.turbopackFileSystemCacheForDev` und `experimental.turbopackFileSystemCacheForBuild` in `next.config.ts` auf `false` gesetzt. Der ursprüngliche Produktionsbuild gelang damit.
 
-`.npmrc` hält außerdem exakte Versionen, strenge Engines/Peers und deaktivierte Installationsskripte fest. Kein `--force` oder `--legacy-peer-deps`. Der Wrapper `scripts/next.mjs` deaktiviert Next-Telemetrie für Entwicklung und Build. Start-/Prüfbefehle und Reihenfolge nach einem Clone: [Root-README](../../README.md#lokal-einrichten-und-starten).
+Beide Workarounds sind aus der aktiven Konfiguration entfernt. In der Abschlusssitzung erneut geprüft: kein `bin-links=false`, effektiver npm-Wert `bin-links=true`, gültige TypeScript-/ESLint-Symlinks unter `node_modules/.bin`, keine explizite Turbopack-Cache-Deaktivierung sowie erfolgreiche Typ-, Lint-, Format- und Produktionsbuild-Prüfung. Das ist kein Nachweis einer bestimmten Cache-Trefferquote oder einer Performance-Verbesserung.
+
+Frischer GitHub-Clone, sauberer Status direkt nach dem Clone, npm-Neuinstallation, manueller Symlink-Test, Entwicklungsstart und Browserdarstellung der drei Einstiegspunkte wurden von Florian aus dem bisherigen Verlauf bestätigt. Keine erneute Installation oder Browserprüfung in dieser Abschlusssitzung. Quellen und einzelne Prüfgrenzen stehen zentral im [Nachweisstand](../development/open-items.md#tatsächlicher-nachweisstand). Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen.
+
+`.npmrc` hält weiterhin exakte Versionen, strenge Engines/Peers und deaktivierte Installationsskripte fest. Kein `--force` oder `--legacy-peer-deps`. Die direkten Node-CLI-Aufrufe der npm-Skripte bleiben unverändert. Der Wrapper `scripts/next.mjs` deaktiviert Next-Telemetrie für Entwicklung und Build. Start-/Prüfbefehle und Reihenfolge nach einem Clone: [Root-README](../../README.md#lokal-einrichten-und-starten).
 
 ## ESLint-9-Ausnahme und ESLint-10-Proof-of-Concept
 

@@ -22,4 +22,4 @@ Für Modelle, Bilder, Musik, Effekte, Schriften und Symbole dokumentieren: Quell
 
 ## Veröffentlichung
 
-Repository zunächst privat; Website kann später öffentlich sein. UI-Text „Quellcode derzeit privat“, bis Veröffentlichung tatsächlich beschlossen und erfolgt ist. Domain, Hosting, öffentliche Kontaktangaben und notwendige rechtliche Seitentexte stehen noch aus. Vor Release anhand des tatsächlichen Angebots prüfen; dieses Dokument trifft keine abschließende rechtliche Bewertung und erfindet keine Adresse/Impressumsdaten.
+Das GitHub-Repository ist inzwischen öffentlich; die Website-Veröffentlichung steht weiterhin aus. Die frühere Vorgabe „Quellcode derzeit privat“ ist überholt. Der öffentliche Repository-Zugang bedeutet nicht, dass Quellcode-Links bereits in der Portfolio-Oberfläche implementiert sind. Nur bestätigte, tatsächlich funktionierende Links veröffentlichen; keine Repository-URL erfinden. Domain, Hosting, öffentliche Kontaktangaben und notwendige rechtliche Seitentexte stehen noch aus. Vor Release anhand des tatsächlichen Angebots prüfen; dieses Dokument trifft keine abschließende rechtliche Bewertung und erfindet keine Adresse/Impressumsdaten.

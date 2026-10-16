@@ -22,15 +22,15 @@ Vor dem Wechsel müssen mindestens alle Bedingungen erfüllt sein:
 
 Insbesondere die nachgewiesenen Lücken bei display-name, jsx-key/Spread, doppelten Props, veralteten APIs und unescaped Entities klären. Einzelne erfolgreiche Compilerbeispiele sind kein vollständiger Ersatznachweis. Der Dokumentationsabschluss enthält keine Migration.
 
-### P1 – Git-Sicherung, nativer Entwicklungsort und Clone-Prüfung
+### P1 – Nächste Git-Sicherung und verbleibende Umgebungsnachweise
 
-Florian übernimmt den ersten Implementierungs-Commit auf `dev` und die Sicherung. Danach aktives Repository vom VirtualBox Shared Folder auf das native Ubuntu-Dateisystem verlagern. Die vorhandenen Workarounds bleiben bis zu einer gesondert geprüften Änderung bestehen.
+Der native Ubuntu-Checkout ist eingerichtet; Clone, Neuinstallation und Entwicklungsstart sind von Florian bestätigt. Beide VirtualBox-spezifischen Workarounds sind entfernt; die vier Qualitätsprüfungen wurden hier erneut erfolgreich ausgeführt. Quellen und Grenzen stehen im [Nachweisstand](#tatsächlicher-nachweisstand). Die Verlagerung und die grundlegende Clone-Prüfung sind keine offenen Aufgaben mehr.
 
-Am nativen Ort frischen Clone bzw. neu eingerichteten Checkout mit der dokumentierten Node-/npm-Kombination prüfen: `npm ci --ignore-scripts`, lokaler Entwicklungsstart, Next-Typgenerierung, Typ-/Lint-/Formatprüfung, Produktionsbuild und statische Routen. Dateisystemkompatibilität und Performance messen; Notwendigkeit von bin-links=false und deaktivierten persistenten Turbopack-Caches neu bewerten. Keine erfolgreiche Neuinstallation oder Verlagerung behaupten, solange sie nicht ausgeführt wurde.
+Florian übernimmt den nächsten Commit auf `dev` und die Sicherung. Performance- und Vergleichsmessungen stehen weiterhin aus. Der erfolgreiche Build belegt keine Cache-Trefferquote. Die vollständige Browser-/Accessibility-Abnahme bleibt ein gesonderter Schritt.
 
 ### P1 – Echte Browserabnahme des vorhandenen Grundgerüsts
 
-Nach Möglichkeit nach dem Ubuntu-Umzug: Sprache/Links, direkter Aufruf/Reload, 404, Tastatur/Fokus, Zoom, responsive Ansichten und tatsächliche Browserkonsole prüfen; Browser, Gerät und Ergebnis nennen. Keine vollständige Abnahme von A01/A02 oder A24/A26 allein aus dem bisherigen CLI-/HTTP-Nachweis ableiten. Weltwahl, gespeicherte Sprache und Portfolio-Unterseiten fehlen noch.
+Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Für die vollständige Abnahme im nativen Checkout weiterhin Sprache/Links, direkter Aufruf/Reload, 404, Tastatur/Fokus, Zoom, responsive Ansichten, Accessibility und tatsächliche Browserkonsole prüfen; Browser, Version, Gerät und Ergebnis nennen. Diese Angaben fehlen für den berichteten Browserlauf. Keine vollständige Abnahme von A01/A02 oder A24/A26 allein aus CLI-/HTTP-Prüfungen oder der berichteten Darstellung ableiten. Weltwahl, gespeicherte Sprache und Portfolio-Unterseiten fehlen noch.
 
 ### Spätere technische Aufgaben
 
@@ -42,7 +42,7 @@ Nach Möglichkeit nach dem Ubuntu-Umzug: Sprache/Links, direkter Aufruf/Reload, 
 
 | Zeitpunkt                | Offene Entscheidung / Prüfung                                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phase 00 – Restprüfungen | Browserabnahme, frischer Clone, nativer Entwicklungsort und priorisierte ESLint-10-Migration wie oben; Versionen und Lockfile des Grundgerüsts sind bereits nachgewiesen. |
+| Phase 00 – Restprüfungen | Vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
 | Phase 1                  | Konkrete statische Unterpfade/History, Scrollbewahrung, responsive Breiten, Übersetzungsschlüssel.                                                                        |
 | Phase 2                  | Maßstab, Kameraabstand, Kollisions-/Rampenparameter, Grenzen, Durchgänge, begehbare Flächen; Prototypmodell laden/abspielen.                                              |
 | Phase 3                  | Kristall-Anker und sichere Annäherung, Drehung, Animationstiming inklusive Teleport/Positionierung; etwa eine Sekunde nur Startvorschlag.                                 |
@@ -79,20 +79,24 @@ Stack beschlossen; installierte Grundgerüst-Versionen in [architecture.md](../c
 
 ## Tatsächlicher Nachweisstand
 
-Nachweise vom 16.10.2026. Quelle: tatsächliche Dateien, Paket-/Lockfile-Abgleich und die Ausgaben/Abschlussberichte der Initialisierung sowie des isolierten PoC in dieser Projektsitzung. Keine dauerhafte vollständige Testlogsuite im Repository behaupten.
+Nachweise vom 16.10.2026. Drei Quellen getrennt halten: **erneut geprüft** bezeichnet die aktuelle Ubuntu-Abschlusssitzung; **von Florian berichtet** bezeichnet den im Auftrag bestätigten bisherigen Verlauf; **historisch** bezeichnet die früheren Initialisierungs-/Dokumentations- und PoC-Prüfungen. Keine dauerhafte vollständige Testlogsuite im Repository behaupten.
 
-| Prüfung                       | Tatsächliches Ergebnis und Grenze                                                                                                                                                                                                                |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Grundgerüst / Paketauflösung  | Next.js App Router, React, TypeScript, Tailwind, ESLint, Prettier eingerichtet; npm festgelegt; ein Root-Lockfile, Formatversion 3. Alle 14 direkten deklarierten, gelockten und installierten Versionen im Dokumentationsabschluss abgeglichen. |
-| Typprüfung                    | Initialisierung erfolgreich; im Dokumentationsabschluss erneut `node node_modules/typescript/bin/tsc --noEmit --incremental false` erfolgreich, ohne neue tsbuildinfo-Datei.                                                                     |
-| ESLint 9                      | Initialisierung erfolgreich; im Dokumentationsabschluss erneut `node node_modules/eslint/bin/eslint.js . --no-cache` erfolgreich. EOL-Ausnahme bleibt bestehen.                                                                                  |
-| Formatprüfung                 | Initialisierung und erneuter Lauf des vorhandenen Prettier-Checks erfolgreich; dessen bestehende Ignore-Liste nimmt Dokumentation/Assets aus. Dokumentationslinks und -konsistenz sind separat zu prüfen.                                        |
-| Produktionsbuild              | Bei Initialisierung mit deaktiviertem persistentem Turbopack-Cache erfolgreich. Im reinen Dokumentationsabschluss kein neuer Build und keine Anwendungskonfiguration geändert.                                                                   |
-| Statischer Export             | `out/index.html`, `out/de-DE/index.html`, `out/en-EN/index.html` vorhanden; Routen, Links, HTML-lang de/de/en und fehlender Root-Refresh-Redirect im Dokumentationsabschluss erneut lesend kontrolliert.                                         |
-| Lokales HTTP                  | Sprachlinks und HTML-Sprachangaben der drei Einstiegspunkte bei Initialisierung geprüft. Kein erneuter HTTP-Lauf oder echter Browsernachweis im Dokumentationsabschluss.                                                                         |
-| ESLint-10-PoC                 | Strenge Installation und Ausführung erfolgreich, konkrete React-Abweichungen nachgewiesen, keine Migration. Details zentral in architecture.md. Temporäre Umgebung vollständig bereinigt; Hauptprojekt dabei unverändert.                        |
-| Browser / Portfolio / 3D      | Vollständige Browserabnahme fehlt; Portfoliofunktionen, Welt, Canvas und 3D-Integration nicht implementiert. Kein Rendering-/Animations-/Performance- oder vollständiger Rechtenachweis.                                                         |
-| Frischer Clone / Ubuntu-Umzug | Noch nicht ausgeführt. Installations- und Startanleitung vorhanden; Reproduzierbarkeit aus einem frischen Clone bleibt praktisch zu prüfen.                                                                                                      |
+| Prüfung | Tatsächliches Ergebnis und Grenze |
+| --- | --- |
+| Grundgerüst / Paketauflösung | Erneut geprüft: alle 14 direkten Paketversionen stimmen zwischen Manifest, Lockfile und installierten Manifesten überein; ein Root-Lockfile, Formatversion 3. Node.js 24.22.0 und npm 11.19.1 erneut bestätigt. Keine Paketinstallation oder Aktualisierung in dieser Sitzung. |
+| Nativer Checkout / Git | Erneut geprüft: erwartetes Ubuntu-Repository auf nativem Linux-Dateisystem, kein `vboxsf`; Branch `dev` verfolgt `origin/dev`. Frischer GitHub-Clone, unmittelbar danach sauberer Status und Öffnen in VS Code von Florian berichtet; hier keinen zweiten Clone angelegt. |
+| Neuinstallation / Symlinks | Von Florian berichtet: `npm ci --ignore-scripts` installierte 361 Pakete erfolgreich; manueller Symlink-Test und erneute Installation nach Entfernung von `bin-links=false` erfolgreich. Erneut geprüft: Eintrag fehlt, npm meldet `bin-links=true`; TypeScript-/ESLint-Symlinks unter `node_modules/.bin` sind gültig. Installation und manuellen Schreibtest hier nicht wiederholt. |
+| Typprüfung | Erneut `npm run typecheck`: Exitcode 0, keine Warnungen ausgegeben. Next-Typdateien waren bereits vorhanden; kein separater Test vor deren erster Generierung. |
+| ESLint 9 | Erneut `npm run lint`: Exitcode 0, keine Warnungen ausgegeben. Befristete ESLint-9.39.5-Ausnahme und priorisierte ESLint-10-Migration bleiben bestehen. |
+| Formatprüfung | Erneut `npm run format:check`: Exitcode 0, keine Warnungen ausgegeben. Die bestehende Ignore-Liste nimmt Dokumentation/Assets aus; Dokumentationslinks und Konsistenz werden separat geprüft. |
+| Produktionsbuild | Erneut `npm run build` mit Next.js 16.4.2/Turbopack: Exitcode 0, keine Warnungen ausgegeben. Keine explizite persistente Turbopack-Cache-Deaktivierung mehr in `next.config.ts`; Build nach Entfernung der Workarounds auch von Florian berichtet. Keine Performance-/Cache-Trefferquotenmessung. |
+| Statischer Export | Erneuter Build erzeugt `/`, `/de-DE/` und `/en-EN/`; zugehörige HTML-Dateien anschließend lesend geprüft: HTML-lang de/de/en, Sprach-/Startlinks vorhanden, kein Meta-Refresh-Redirect. Dies ersetzt keine Browserabnahme. |
+| Entwicklungsstart / lokales HTTP | Entwicklungsstart im nativen Checkout von Florian berichtet. Historisch Sprachlinks und HTML-Sprachangaben lokal per HTTP geprüft. In dieser Sitzung keinen Entwicklungsserver oder HTTP-Test gestartet und keinen Prozess beendet. |
+| Browser | Darstellung aller drei Einstiegspunkte im nativen Checkout von Florian berichtet; hier nicht wiederholt. Browser-/Geräteversionen und detaillierte Prüfschritte liegen nicht vor. Vollständige Browser-, Accessibility- und Performance-Abnahme bleibt offen. |
+| ESLint-10-PoC | Historisch strenge Installation und Ausführung erfolgreich, konkrete React-Abweichungen nachgewiesen, keine Migration. Details zentral in architecture.md. Temporäre Umgebung bereinigt; Hauptprojekt dabei unverändert. Hier nicht erneut ausgeführt oder neu bewertet. |
+| Portfolio / 3D / Rechte | Portfoliofunktionen, Welt, Canvas und 3D-Integration nicht implementiert. Kein praktischer 3D-Rendering-/Animations-/Performance- oder vollständiger Rechtenachweis. |
+
+Nach Entfernung der Workarounds hat Florian keine erneuten Symlink- oder Turbopack-Dateisystemfehler berichtet. Auch die aktuellen Prüfungen ergaben solche Fehler nicht; daraus folgt keine allgemeine Fehlerfreiheit.
 
 Die ursprüngliche Dokumentations-/Archivprüfung (33 ursprüngliche Markdown-Dateien, 29 PNGs visuell, eine GLB strukturell mit Running/Walking) bleibt historisch in [revision-notes.md](revision-notes.md). Sie ist kein aktueller App-Status und keine praktische Modellabnahme.
 

@@ -42,7 +42,7 @@ Career Progression: Vor Ausbildung → Während Ausbildung → Vollzeit als Entw
 
 The Arcane Tower ist das erste bestätigte persönliche Projekt. Galerie erweiterbar, maximal sechs echte Projekte pro Seite; dekorative Coming-Soon-Karten nicht als Projekte zählen und keine konkreten Pläne suggerieren. Projektdetails unterstützen optionale Module zu Idee, Umsetzung, Status, Zeitraum, Rolle, Technologien, Features, Herausforderungen, KI-/Asset-Anteilen und Medien.
 
-Nur tatsächlichen Entwicklungsstand nennen. Kein Video-Play-Button ohne Video, keine aktiven Links ohne verfügbares Ziel. Wegschild/Projektdetail zunächst „Quellcode derzeit privat“. Erst nach tatsächlicher Repository-Veröffentlichung und Entscheidung ersetzen. Öffentliches GitHub-Profil darf unabhängig davon unter Kontakt verlinkt sein. Kontakt: mailto, GitHub, optional bestätigtes LinkedIn; keine erfundenen Adressen oder Verfügbarkeitsangaben.
+Nur tatsächlichen Entwicklungsstand nennen. Kein Video-Play-Button ohne Video, keine aktiven Links ohne verfügbares Ziel. Das GitHub-Repository ist inzwischen öffentlich; die frühere Vorgabe „Quellcode derzeit privat“ ist damit überholt. Der öffentliche Repository-Zugang belegt keine bereits implementierten Quellcode-Links im Wegschild oder Projektdetail. Nur bestätigte, tatsächlich funktionierende Links veröffentlichen; keine Repository-URL erfinden. Öffentliches GitHub-Profil darf unabhängig davon unter Kontakt verlinkt sein. Kontakt: mailto, GitHub, optional bestätigtes LinkedIn; keine erfundenen Adressen oder Verfügbarkeitsangaben.
 
 ## Gemeinsame Daten
 

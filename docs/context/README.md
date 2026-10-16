@@ -1,6 +1,6 @@
 # Kontextübersicht
 
-Stand: 16.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00 ist implementiert und im dokumentierten Umfang geprüft. Eine vollständige Browserabnahme, Portfoliofunktionen und 3D-Welt stehen noch aus.
+Stand: 16.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00 ist implementiert; der native Ubuntu-Checkout ist eingerichtet und im dokumentierten Umfang erneut geprüft. Eine vollständige Browserabnahme, Portfoliofunktionen und 3D-Welt stehen noch aus.
 
 ## Lesen nach Aufgabe
 
@@ -11,7 +11,7 @@ Stand: 16.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00
 | [gameplay-and-interactions.md](gameplay-and-interactions.md)         | Einzige zentrale Quelle für Eingaben, Kristall, Teleport, Aufgaben und Rückkehr                        |
 | [ui-and-navigation.md](ui-and-navigation.md)                         | Layout, Navigation, Dialoge, Scrollen, HUD und Einstellungen                                           |
 | [portfolio-and-content.md](portfolio-and-content.md)                 | Inhaltshierarchie, Daten, Sprache und wahrheitsgemäße Inhalte                                          |
-| [architecture.md](architecture.md)                                   | Installierte Versionen, Architektur, Shared-Folder-Ausnahmen, ESLint-PoC, Git-/Modellregel und Quellen |
+| [architecture.md](architecture.md)                                   | Installierte Versionen, Architektur, Ubuntu-Checkout und historische Workarounds, ESLint-PoC, Git-/Modellregel und Quellen |
 | [accessibility-and-performance.md](accessibility-and-performance.md) | Zugänglichkeit, Laden, Qualität, Fehler und Prüfungen                                                  |
 | [assets.md](assets.md)                                               | Tatsächlicher Bestand, Prototyp, Beschaffung und Integration                                           |
 | [privacy-security-and-licenses.md](privacy-security-and-licenses.md) | Vertraulichkeit, Rechte und Veröffentlichung                                                           |
@@ -45,7 +45,7 @@ Ergänzende Begriffe:
 
 ## Prüfstand und Pflege
 
-Aktueller technischer Nachweisstand: [open-items.md](../development/open-items.md#tatsächlicher-nachweisstand). Start-/Prüfbefehle: [Root-README](../../README.md). Paketversionen, Workarounds und ESLint-10-Erkenntnisse: [architecture.md](architecture.md). Fortschritt und Folgeschritte: [roadmap.md](../development/roadmap.md).
+Aktueller technischer Nachweisstand: [open-items.md](../development/open-items.md#tatsächlicher-nachweisstand). Start-/Prüfbefehle: [Root-README](../../README.md). Paketversionen, Ubuntu-Checkout, historische Workarounds und ESLint-10-Erkenntnisse: [architecture.md](architecture.md). Fortschritt und Folgeschritte: [roadmap.md](../development/roadmap.md).
 
 Die frühere Archivprüfung umfasste 33 ursprüngliche Markdown-Dateien, alle 29 PNGs und die GLB-Struktur. [revision-notes.md](../development/revision-notes.md) hält diese historische Dokumentationskonsolidierung fest; dortige Aussagen ohne App-Build sind keine aktuelle Zustandsbeschreibung. Praktisches 3D-Rendering, Performance und vollständige Nutzungsrechte bleiben ungeprüft.
 

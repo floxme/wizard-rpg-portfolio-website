@@ -20,7 +20,7 @@ Jede Phase in kleine überprüfbare Aufträge teilen; nur unmittelbar relevante 
 
 Phase 00 liefert ein geprüftes statisches Platzhalter-Grundgerüst mit npm-Lockfile und Qualitätswerkzeugen. Das ist weder das vollständige HTML-Portfolio aus Phase 01 noch ein Weltprototyp. Detaillierte Nachweise und Grenzen stehen ausschließlich in [open-items.md](open-items.md#tatsächlicher-nachweisstand), Versionen und Ausnahmen in [architecture.md](../context/architecture.md).
 
-Als nächste Sicherung ist Florians Implementierungs-Commit auf dev vorgesehen; anschließend der geplante Umzug ins native Ubuntu-Dateisystem samt erneuter Installations-/Start-/Dateisystemprüfung und nach Möglichkeit echter Browserabnahme. ESLint 9 bleibt vorläufig bewusst akzeptiert; die spätere ESLint-10-Migration ist priorisiert. Diese Restaufgaben starten nicht automatisch weitere Entwicklungsphasen. Phase 01 benötigt einen eigenen abgegrenzten Implementierungsauftrag.
+Der native Ubuntu-Checkout ist eingerichtet, beide Shared-Folder-Workarounds sind entfernt und die Qualitätsprüfungen dort erneut erfolgreich. Clone, Neuinstallation, Entwicklungsstart und erste Browserdarstellung sind von Florian bestätigt; Quellen und Prüfgrenzen stehen zentral in open-items.md. Florian übernimmt den nächsten Commit auf `dev`. Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen. ESLint 9 bleibt vorläufig bewusst akzeptiert; die spätere ESLint-10-Migration ist priorisiert. Diese Restaufgaben starten nicht automatisch weitere Entwicklungsphasen. Phase 01 benötigt einen eigenen abgegrenzten Implementierungsauftrag.
 
 ## Prüftore
 
