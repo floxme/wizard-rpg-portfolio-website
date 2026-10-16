@@ -1,6 +1,6 @@
 # Phase 01 – HTML-Portfolio, Daten und Navigation
 
-Voraussetzung: Phase 00 im benannten Umfang geprüft, offene Windows-Vorbereitung nach Testworkflow abgeschlossen und eigener Implementierungsauftrag für Phase 01 erteilt. Phase 01 ist derzeit nicht begonnen.
+Voraussetzung: Phase-00-Nachweise und offene Befunde nach Testworkflow und docs/development/open-items.md geprüft und eigener Implementierungsauftrag für Phase 01 erteilt. Windows-Grundeinrichtung und erster Opera-HTML-Test sind vom Nutzer bestätigt; der Devmodus-Routenbefund ist damit nicht behoben. Phase 01 ist derzeit nicht begonnen.
 
 Die Phase in kleine Aufträge teilen, nicht ungefragt alle Arbeitspakete auf einmal erledigen. Fehlende Fragen nur soweit für den nächsten Schritt nötig stellen.
 

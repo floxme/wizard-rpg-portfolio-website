@@ -47,7 +47,7 @@ Sollzustand, noch kein Testprotokoll. Für jeden späteren Test Browser/Gerät, 
 
 ## Testebenen und visuelle Freigabe
 
-Maßgeblich sind [Testworkflow](testing-workflow.md), dessen [Prüfebenen](testing-workflow.md#vorhandene-prüfungen-und-mögliche-testarchitektur) und [Nachweisstatus](testing-workflow.md#nachweisstatus-und-datenschutz). Keine installierten Verhaltenstest-Werkzeuge oder Windows-/Opera-Ergebnisse ohne tatsächlichen Nachweis behaupten. Windows-Vorbereitung ist vor Phase 01 noch offen; die Kriterien bleiben Sollzustand.
+Maßgeblich sind [Testworkflow](testing-workflow.md), dessen [Prüfebenen](testing-workflow.md#vorhandene-prüfungen-und-mögliche-testarchitektur) und [Nachweisstatus](testing-workflow.md#nachweisstatus-und-datenschutz). Keine installierten Verhaltenstest-Werkzeuge oder Windows-/Opera-Ergebnisse ohne tatsächlichen Nachweis behaupten. Windows-Grundeinrichtung und erster Opera-HTML-Test sind vom Nutzer bestätigt; das ist keine vollständige Erfüllung von A01/A02 oder Grafik-/Accessibility-Kriterien. Der Devmodus-Routenbefund bleibt in open-items.md offen; die Kriterien bleiben Sollzustand.
 
 **Ein erfolgreich abgeschlossener automatisierter Test beweist nicht, dass eine Animation natürlich aussieht, eine Kamerafahrt angenehm wirkt, ein Übergang optisch gelungen ist oder eine 3D-Szene den verbindlichen Mockups entspricht.** Gesonderte visuelle Nutzerprüfung insbesondere für Magierbewegung/Idle/Lauf/Interaktion, Kristallpositionierung/-ausrichtung, Aktivierung/Teleport/Kamera, Welt-/HTML-Übergänge, Grafik/Licht/Effekte/Performance und Layout-/Referenzwirkung. Funktionale Kriterien und visuelle Freigabe getrennt belegen; Prototypplatzhalter bleiben gemäß A39 zulässig.
 

@@ -9,11 +9,11 @@ Stand: 17.10.2026. KI-neutrale Arbeitsvorlagen, keine ausführbaren Skripte. Öf
 
 ## Beginnen
 
-Nutze [Phase 00](workflow/00-clarification-and-setup.md), Umfang zunächst Kontext-/Repositoryprüfung und Initialisierung. Vor [Phase 01](workflow/01-html-portfolio.md) die offene Windows-Vorbereitung im Testworkflow abschließen; anschließend gesonderten Implementierungsauftrag erteilen. Kleine überprüfbare Aufträge statt alle Prompts gleichzeitig. Rückfragen gezielt vor der betroffenen Funktion; nicht sämtliche Assets und Details vor dem Setup festlegen.
+Nutze [Phase 00](workflow/00-clarification-and-setup.md), Umfang zunächst Kontext-/Repositoryprüfung und Initialisierung. Windows-Grundeinrichtung und erster HTML-Test sind laut Nutzer erfolgt; vor [Phase 01](workflow/01-html-portfolio.md) offene Phase-00-Befunde im Testworkflow und in docs/development/open-items.md prüfen und gesonderten Implementierungsauftrag erteilen. Kleine überprüfbare Aufträge statt alle Prompts gleichzeitig. Rückfragen gezielt vor der betroffenen Funktion; nicht sämtliche Assets und Details vor dem Setup festlegen.
 
 AGENTS.md gilt immer. Vorlagen erweitern keine Rechte. Analyse-/Reviewaufträge sind keine automatische Codeänderung. Beschlossener Stack, kein Springen, Platzhalter zuerst, PNGs/Original-GLB unverändert und keine eigenständigen Commits/Pushes/Deployments.
 
-[Entwicklungs- und Testworkflow](../docs/development/testing-workflow.md) ist die zentrale Prozessquelle: Ubuntu-Entwicklung/automatisierte Checks, Git-Übergabe und getrennte Windows-/Opera-Prüfung durch Florian. Keine Hostberechtigungen aus einer Vorlage ableiten; grüne Tests ersetzen keine visuelle Nutzerfreigabe. Windows-Vorbereitung ist vor Phase 01 noch offen; Phase 01 benötigt einen eigenen Auftrag und ist nicht begonnen.
+[Entwicklungs- und Testworkflow](../docs/development/testing-workflow.md) ist die zentrale Prozessquelle: Ubuntu-Entwicklung/automatisierte Checks, Git-Übergabe und getrennte Windows-/Opera-Prüfung durch Florian. Keine Hostberechtigungen aus einer Vorlage ableiten; grüne Tests ersetzen keine visuelle Nutzerfreigabe. Windows-Grundeinrichtung und erster Opera-HTML-Test sind laut Nutzer erfolgt; offene Devmodus- und spätere Abnahmen bleiben in docs/development/open-items.md dokumentiert. Phase 01 benötigt einen eigenen Auftrag und ist nicht begonnen.
 
 ## Abschluss jedes dateiverändernden Auftrags
 

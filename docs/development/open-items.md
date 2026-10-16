@@ -4,11 +4,11 @@ Stand: 17.10.2026. Phase 00 ist technisch initialisiert und dokumentiert. Die fo
 
 ## Priorisierte technische Aufgaben
 
-### Vorbereitung vor Phase 01 – Windows-Testumgebung
+### Windows-Grundeinrichtung erledigt; Devmodus-Routenbefund offen
 
-Windows-Testumgebung noch nicht vollständig eingerichtet. Florian richtet den eigenständigen `dev`-Checkout samt VS Code, Git, projektpassender Node.js-/npm-Umgebung, lokaler Installation und Start in Opera ein. Ablauf und Nachweise zentral im [Testworkflow](testing-workflow.md#offene-windows-vorbereitung-vor-phase-01). Keine Hostzugriffsrechte für Codex, kein Austausch von `node_modules` mit Ubuntu. Diese Vorbereitung vor Phase 01 nachweisen; Phase 01 ist nicht begonnen und braucht einen eigenen Implementierungsauftrag. Zusätzliche Testframeworks/CI sind keine Voraussetzung.
+Die Windows-Testumgebung ist für die grundlegenden HTML-Tests eingerichtet: lokaler Devstart und drei Einstiegsseiten von Florian in Opera manuell bestätigt. Umgebung zentral im [Testworkflow](testing-workflow.md#windows-einrichtung-und-erster-html-test); konkreter Fehler- und Reproduktionsnachweis [unten](#windows-html-test-und-devmodus-routenbefund--17102026). Kein automatischer Windows-Zugriff für Codex und keine geteilten `node_modules`.
 
-Die von Florian berichteten VM-Grafikgrenzen sind im Workflow als Umgebungsbefunde eingeordnet, keine Anwendungsfehler oder Windows-Testergebnisse.
+Offen ist die fehlerhafte Devserver-Behandlung nicht generierter Pfade mit `output: export`: unter Ubuntu reproduziert, Windows-Ursache und dauerhafte Behebung nicht abschließend nachgewiesen. Vor einem folgenden Implementierungsauftrag den Windows-Ablauf mit eindeutigem Stand und Requestreihenfolge abgleichen. Phase 01 bleibt nicht begonnen; Grafik-/Animations-/Accessibility-Abnahmen erfolgen im jeweils betroffenen Umfang. Keine neuen Testframeworks oder CI aus diesem Befund ableiten.
 
 ### P1 – Verbindliche ESLint-10-Migration
 
@@ -48,7 +48,7 @@ Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Fü
 
 | Zeitpunkt                | Offene Entscheidung / Prüfung                                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phase 00 – Restprüfungen | Windows-Vorbereitung vor Phase 01, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
+| Phase 00 – Restprüfungen | Devmodus-Routenbefund nach Windows-Grundtest, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
 | Phase 1                  | Konkrete statische Unterpfade/History, Scrollbewahrung, responsive Breiten, Übersetzungsschlüssel.                                                                        |
 | Phase 2                  | Maßstab, Kameraabstand, Kollisions-/Rampenparameter, Grenzen, Durchgänge, begehbare Flächen; Prototypmodell laden/abspielen.                                              |
 | Phase 3                  | Kristall-Anker und sichere Annäherung, Drehung, Animationstiming inklusive Teleport/Positionierung; etwa eine Sekunde nur Startvorschlag.                                 |
@@ -102,13 +102,65 @@ Nachweise vom 16.10.2026. Drei Quellen getrennt halten: **erneut geprüft** beze
 | ESLint-10-PoC | Historisch strenge Installation und Ausführung erfolgreich, konkrete React-Abweichungen nachgewiesen, keine Migration. Details zentral in architecture.md. Temporäre Umgebung bereinigt; Hauptprojekt dabei unverändert. Hier nicht erneut ausgeführt oder neu bewertet. |
 | Portfolio / 3D / Rechte | Portfoliofunktionen, Welt, Canvas und 3D-Integration nicht implementiert. Kein praktischer 3D-Rendering-/Animations-/Performance- oder vollständiger Rechtenachweis. |
 
-Nach Entfernung der Workarounds hat Florian keine erneuten Symlink- oder Turbopack-Dateisystemfehler berichtet. Auch die aktuellen Prüfungen ergaben solche Fehler nicht; daraus folgt keine allgemeine Fehlerfreiheit.
+Nach Entfernung der Workarounds wurden bis zum damaligen Abschluss keine erneuten Symlink- oder Turbopack-Dateisystemfehler berichtet oder in dessen Prüfungen beobachtet. Das ist keine allgemeine Fehlerfreiheit und kein Ausschluss des später dokumentierten Devmodus-Routenfehlers.
 
 ### Dokumentationskonsolidierung vor Phase 01 – 17.10.2026
 
 In dieser Konsolidierung erneut in Ubuntu ausgeführt: `npm run typecheck`, `npm run lint`, `npm run format:check` und `npm run build`, jeweils Exitcode 0 ohne ausgegebene Warnungen. Der Build erzeugt weiterhin die drei Einstiegspunkte `/`, `/de-DE/` und `/en-EN/`. Typdateien und lokale Abhängigkeiten waren bereits vorhanden; keine Neuinstallation oder Windows-Reproduktion. Formatprüfung nimmt Dokumentation aus; deren Struktur, relative Links, Anker und Konsistenz wurden separat geprüft.
 
 Der zentrale Testworkflow und seine Verweise sind dokumentiert. Hardware-/VM-Grafikangaben stammen aus Florians Bericht vom 17.10.2026; Windows-Einrichtung, Opera-, WebGL-/GPU-, Accessibility- und visuelle Nutzerabnahme wurden hier nicht ausgeführt. Keine Testframeworks oder CI eingerichtet, keine Phase-01-Implementierung. Die historischen Nachweise oben behalten ihre ursprünglichen Quellen und Grenzen.
+
+### Windows-HTML-Test und Devmodus-Routenbefund – 17.10.2026
+
+**Windows: manuell vom Nutzer geprüft.** Im eigenständigen `dev`-Checkout unter Windows 11 mit VS Code, Git for Windows 2.56.0.windows.2 und nvm-windows 2.0.1 (Shim-Modus): Node.js 24.22.0, npm 11.19.1; `npm ci` installierte laut Nutzer 360 Pakete erfolgreich. Bekannte ESLint-9.39.5-Warnung, keine Änderung der befristeten Ausnahme. `npm run dev` startete, `/`, `/de-DE/` und `/en-EN/` zeigten die vorhandenen Platzhalter in Opera. Wiederholte Sprachrouten antworteten laut Nutzer mit HTTP 200. Umgebung und Sicherheitsgrenze zentral im [Testworkflow](testing-workflow.md#windows-einrichtung-und-erster-html-test).
+
+Während der ersten Initialisierung, unter anderem im Zusammenhang mit `/favicon.ico`, wurde folgende Meldung beobachtet:
+
+```text
+Error: Page "/(localized)/[locale]/page" is missing param "/[locale]" in "generateStaticParams()", which is required with "output: export" config.
+Failed to generate static paths for /[locale]
+```
+
+Spätere erfolgreiche Sprachroutenaufrufe zeigten laut Nutzer die Meldung nicht erneut. Das belegt funktionierende Seiten im geprüften Ablauf, keine dauerhafte Fehlerbehebung. Screenshot zu `/en-EN/` laut Nutzer vorhanden, hier nicht separat erhalten/gesichtet; keine eigenen Windows-Tests durch Codex. Opera-Version, genauer Windows-Testcommit, vollständige Requestchronologie und Originallogs fehlen für einen exakten Umgebungsvergleich.
+
+**Ubuntu: von Codex per lokalen HTTP-Requests geprüft, kein Browserlauf.** Next.js 16.4.2/Turbopack, Node.js 24.22.0, npm 11.19.1; unveränderter Routing-/Konfigurationsstand von Commit `33586566f94b` auf `dev`. Zwei getrennte Devserver-Prozesse mit `npm run dev -- --hostname 127.0.0.1 --port 3100`; vorhandene Plattencaches erhalten, kein Test eines frisch installierten oder geleerten Checkouts. Nur die eigenen Prozesse beendet.
+
+- Erster Ablauf: `/`, `/de-DE/`, `/en-EN/` jeweils 200; `/favicon.ico`, `/fr-FR/`, `/unbekannt/` und `/de-DE/unbekannt/` jeweils 404; gültige Sprachrouten danach weiterhin 200. Im Ablauf erschienen die exakte Missing-param-Meldung und `Failed to generate static paths` insgesamt viermal. Wegen asynchroner Logausgabe keine eindeutige Zuordnung jeder Meldung zu einem einzelnen Request behaupten.
+- Zweiter Ablauf mit neuem Prozess, Favicon zuerst und je einer Sekunde Beobachtungszeit nach Requests:
+
+| Requestreihenfolge | HTTP | Neue Missing-param-Meldungen im Beobachtungsfenster |
+| --- | --- | --- |
+| `/favicon.ico` zuerst | 500 | 1 |
+| `/` | 200 | 0 |
+| `/de-DE/` | 200 | 0 |
+| `/en-EN/` | 200 | 0 |
+| `/favicon.ico` erneut | 404 | 1, zusätzlich `Failed to generate static paths` |
+| `/fr-FR/` | 500 | 1 |
+| `/unbekannt/` | 500 | 1 |
+| `/de-DE/unbekannt/` | 404 | 0 |
+| `/de-DE/`, danach `/en-EN/` | jeweils 200 | jeweils 0 |
+
+Damit ist die Meldung unter Ubuntu reproduziert; teilweise sogar HTTP 500 bei unbekannten Pfaden statt bloßer Terminalausgabe. Der konkrete Windows-Ablauf und seine Cache-/Requestbedingungen sind damit nicht bewiesen.
+
+**Belegte technische Einordnung:**
+
+- `src/app/(localized)/[locale]/layout.tsx` exportiert `generateStaticParams()` mit `{ locale: "de-DE" }` und `{ locale: "en-EN" }` sowie `dynamicParams=false`. Die Funktion fehlt nicht. Page und Layout prüfen die Locale zusätzlich mit `isLocale`/`notFound`. Root liegt getrennt unter `(entry)`; keine Middleware, kein eigenes Favicon und keine spezielle Favicon-Route im vorhandenen Projekt.
+- Die offizielle, im installierten Paket mitgelieferte Dokumentation erlaubt `generateStaticParams` in Layouts. Route Groups gehören nicht zur URL; mehrere Root-Layouts sind bei einer Home-Route innerhalb einer Gruppe erlaubt. Kein belegter Fehler durch den Layout-Export oder die beiden Route Groups.
+- Im installierten `node_modules/next/dist/server/dev/next-dev-server.js` prüft `getStaticPaths` bei `output === 'export'`, ob ein erzeugter `prerenderedRoutes`-Eintrag exakt `urlPathname` entspricht. Andernfalls wirft es die beobachtete Meldung. Deren `"/[locale]"` stammt aus dem Routenmuster `pathname`, nicht aus einem Nachweis, dass der Objektschlüssel `locale` fehlt.
+- Die Funktion liest einen Cache nach Routenmuster, startet eine erneute Generierung und gibt einen vorhandenen Wert sofort zurück. Der Catch-Zweig protokolliert bei vorhandenem Cache `Failed to generate static paths`, entfernt den Cacheeintrag und wirft ohne vorherigen Wert den Fehler weiter. Das erklärt auf Codeebene die möglichen Vordergrund-/Hintergrundfehler; keine vollständige Ablaufverfolgung sämtlicher Windows-Interna behaupten.
+- Unbekannte erste Segmente können im untersuchten Devablauf auf die dynamische Locale-Route treffen und an der Exportprüfung scheitern, bevor eine gewöhnliche 404-Antwort zustande kommt. Für den ersten Favicon-Aufruf ist das durch die Meldung plus HTTP 500 belegt. Welche Rolle Turbopack gegenüber anderen Bundlern oder Windows gegenüber Ubuntu spielt, ist ohne Gegenprobe offen. Kein bestätigter allgemeiner Turbopack- oder Windows-Defekt abgeleitet.
+
+**Korrekturstatus und nächste Prüfung:** Kein belegter Fehler in der Rückgabe der gültigen Locales; keine Quellcode-, Routing-, Konfigurations- oder Paketänderung durchgeführt. Der Dev-404-/Export-Befund bleibt offen, kein Fix nachgewiesen. Root-/Sprach-URLs und Static Export erhalten; weder `dynamicParams=true` noch Entfernen von `output: export` oder ein erfundenes Favicon als pauschalen Fix einsetzen. Ein Produktionsbuild ist ein separater Nachweis, keine Devmodus-Abnahme.
+
+Für den nächsten Windows-Vergleich exakten Commit, Opera-/Node-/npm-Version, Startmodus, vorhandenen Cache und zeitliche Requests festhalten: nach neuem Serverstart Favicon zuerst, danach Root/de/en und erneut Favicon, dann unbekannte Locale und tiefer unbekannter Pfad. Logs und Statuscodes bereinigt übermitteln. Cache-Leerung oder anderer Bundler wären getrennte, bislang nicht ausgeführte Gegenproben. Erst bei belegtem Änderungsbedarf eine minimale Korrektur mit Auswirkungen auf Spracharchitektur/Export zur Freigabe vorlegen.
+
+**Abschlussprüfungen dieses Windows-/Routenanalyseauftrags:** `npm run typecheck`, `npm run lint`, `npm run format:check` und `npm run build` in Ubuntu jeweils Exitcode 0, keine Warnungen ausgegeben. Der Build erzeugte erneut `/`, `/de-DE/` und `/en-EN/`; Exportdateien anschließend lesend geprüft. Die bekannte ESLint-Warnung stammt aus dem vom Nutzer berichteten Windows-Installationslauf, nicht aus diesen vier Checks. Keine Installation oder Paketänderung; Typdateien und Abhängigkeiten waren vorhanden. Markdown-/Linkprüfung und Git-Diff-Prüfung separat, da Dokumentation vom Formatcheck ausgenommen ist.
+
+Die Dokumentation der Grundeinrichtung und des ersten Windows-HTML-Tests ist nachgeführt. Offene Devmodus-Befunde sind damit dokumentiert, nicht behoben; keine vorbehaltlose technische Phase-00-Abnahme und keine Phase-01-Freigabe daraus ableiten.
+
+Zusatzbefund des Ubuntu-Devstarts: Next.js 16.4.2 hängte einen verwalteten `nextjs-agent-rules`-Block an AGENTS.md an. Nur dieser selbst erzeugte Anhang wurde nach dem Test entfernt; ursprüngliche Projektregeln blieben erhalten. Beleg im installierten `server/lib/start-server.js` / `generate-agent-files.js`; keine Änderung der Anwendungskonfiguration zur Abschaltung vorgenommen.
+
+Quellen, geprüft am 17.10.2026: installierter Next.js-16.4.2-Code und mitgelieferte Dokumentation unter `node_modules/next/dist/docs/`, ergänzend [generateStaticParams](https://nextjs.org/docs/app/api-reference/functions/generate-static-params), [Route Groups](https://nextjs.org/docs/app/api-reference/file-conventions/route-groups) und [Static Export](https://nextjs.org/docs/app/guides/static-exports). Die Webdokumentation allein ist kein exakter 16.4.2- oder Windows-Laufzeitnachweis; keine passende bestätigte Upstream-Korrektur nachgewiesen.
 
 Die ursprüngliche Dokumentations-/Archivprüfung (33 ursprüngliche Markdown-Dateien, 29 PNGs visuell, eine GLB strukturell mit Running/Walking) bleibt historisch in [revision-notes.md](revision-notes.md). Sie ist kein aktueller App-Status und keine praktische Modellabnahme.
 

@@ -24,7 +24,9 @@ Typecheck, Linting, Formatprüfung und Produktionsbuild wurden im nativen Ubuntu
 
 ## Entwicklung und Abnahme
 
-Der [zentrale Testworkflow](docs/development/testing-workflow.md) beschreibt Ubuntu-Entwicklung und automatisierte Prüfungen, die isolierte Übergabe über GitHub sowie Florians manuelle Windows-/Opera-Abnahme. Chrome ist bevorzugter Ubuntu-Browser; die gemeldeten VM-Grafikgrenzen ersetzen keine realistischen Grafiktests. Die eigenständige Windows-Testumgebung ist vor Phase 01 noch einzurichten und nachzuweisen. Phase 01 ist nicht begonnen und benötigt einen eigenen Auftrag.
+Der [zentrale Testworkflow](docs/development/testing-workflow.md) beschreibt Ubuntu-Entwicklung und automatisierte Prüfungen, die isolierte Übergabe über GitHub sowie Florians manuelle Windows-/Opera-Abnahme. Chrome ist bevorzugter Ubuntu-Browser; die gemeldeten VM-Grafikgrenzen ersetzen keine realistischen Grafiktests. Die eigenständige Windows-Testumgebung ist für grundlegende HTML-Tests eingerichtet: Installation, Devstart und die drei Einstiegsseiten wurden von Florian unter Windows 11/Opera manuell bestätigt. Phase 01 ist nicht begonnen und benötigt einen eigenen Auftrag.
+
+Der unter Windows beobachtete Missing-param-Fehler wurde unter Ubuntu bei nicht generierten Dev-Pfaden reproduziert, einschließlich eines ersten `/favicon.ico`-Requests mit HTTP 500. Gültige Sprachrouten lieferten danach HTTP 200. Ursache des genauen Windows-Ablaufs und dauerhafte Behebung bleiben offen; [Analyse und Prüfgrenzen](docs/development/open-items.md#windows-html-test-und-devmodus-routenbefund--17102026). Ein erfolgreicher Produktionsbuild ist keine Devmodus-Abnahme.
 
 Ein grüner automatisierter Test ist keine visuelle Nutzerfreigabe. Aktuelle Prüfwerkzeuge und Grenzen, optionale spätere Automation sowie Bugreport-Übergabe stehen im Workflow; keine Windows-Fernsteuerung oder zusätzliche Testinfrastruktur ist eingerichtet.
 

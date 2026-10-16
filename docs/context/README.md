@@ -44,7 +44,7 @@ Ergänzende Begriffe:
 - **Vorhanden:** Datei tatsächlich im gelieferten Stand enthalten.
 - **Geprüft:** nur die ausdrücklich genannte Prüfung.
 
-Prüfmethoden und Ergebnisstatus ergänzen diese Implementierungszustände, ersetzen sie nicht. Definitionen und Belegfelder: [Testworkflow](../development/testing-workflow.md#nachweisstatus-und-datenschutz). Windows-/Opera-Einrichtung ist noch offen; Nutzerberichte nicht als eigene Browserprüfung ausgeben.
+Prüfmethoden und Ergebnisstatus ergänzen diese Implementierungszustände, ersetzen sie nicht. Definitionen und Belegfelder: [Testworkflow](../development/testing-workflow.md#nachweisstatus-und-datenschutz). Windows-Grundeinrichtung und erster HTML-Test in Opera sind von Florian bestätigt; der Devmodus-Routenbefund und weitere Abnahmen bleiben offen. Nutzerberichte nicht als eigene Browserprüfung ausgeben.
 
 ## Prüfstand und Pflege
 

@@ -10,7 +10,7 @@ Die folgenden Umgebungsangaben stammen aus Florians bestätigtem Bericht vom 17.
 | --- | --- |
 | Ubuntu-VM in VirtualBox auf Windows | Primärer Ort für VS Code/Codex, Quellcodeentwicklung, Entwicklungsserver, statische Prüfungen, Builds, geeignete automatisierte Tests und Fehleranalyse. Aktiver Checkout auf nativem Linux-Dateisystem, kein Shared Folder. |
 | Google Chrome in Ubuntu | Bevorzugter Entwicklungsbrowser; ersetzt Firefox in dieser Rolle. Firefox bleibt für optionale Kompatibilitätstests möglich. GPU-Beschleunigung/WebGL sind in der aktuellen VM eingeschränkt beziehungsweise in Chrome blockiert. |
-| Separater Windows-Checkout | Vorgesehen für realistische grafische Tests, noch nicht vollständig eingerichtet. Opera ist der primäre manuelle Abnahmebrowser; Windows-Grafikkarte laut Florian NVIDIA GeForce RTX 5070 Ti. Keine daraus abgeleitete Leistungsgarantie. |
+| Separater Windows-Checkout | Für grundlegende HTML-Tests eingerichtet; Installation, Devstart und drei Einstiegsseiten von Florian unter Windows 11/Opera manuell bestätigt. Opera bleibt primärer manueller Abnahmebrowser; NVIDIA GeForce RTX 5070 Ti laut Nutzer. Noch kein WebGL-/3D-/GPU-Performance-Nachweis. |
 
 Die VM hat aktuell vier zugewiesene CPU-Kerne; laut Florian hat das die allgemeine Bedienbarkeit spürbar verbessert. Guest Additions wurden auf 7.2.20 aktualisiert. Tests mit Wayland und X11 beseitigten die Grafikgrenzen nicht. Diese VirtualBox-Grafikprobleme sind Umgebungsgrenzen, kein nachgewiesener Anwendungsfehler. Ein beobachteter Windows-Hypervisor-/NEM-Modus ist ein separater möglicher Performancefaktor; ein ursächlicher Zusammenhang mit der WebGL-Sperre ist nicht nachgewiesen. Windows-Sicherheitsfunktionen und OPNsense werden nicht eigenständig verändert.
 
@@ -22,17 +22,31 @@ Codex in Ubuntu besitzt durch diesen Workflow keine Windows-Berechtigungen. Kein
 
 Entwickelt wird auf `dev`; `main` bleibt geschützt. Das ist eine verbindliche Arbeitsregel, kein hier erneut geprüfter Nachweis der GitHub-Branchschutzkonfiguration. Florian prüft und überträgt freigegebene Änderungen selbst. Codex führt keine eigenständigen Commits, Pushes, Branchwechsel oder Veröffentlichungen aus. Der Windows-Checkout übernimmt freigegebene Stände über Git, statt dieselben Projektdateien parallel in beiden Umgebungen zu bearbeiten.
 
-## Offene Windows-Vorbereitung vor Phase 01
+## Windows-Einrichtung und erster HTML-Test
 
-Diese Vorbereitung ist noch offen; keine erfolgreiche Windows-Einrichtung behaupten:
+Stand 17.10.2026, **manuell vom Nutzer unter Windows überprüft**, kein Codex-Windows-Lauf. Die grundlegende HTML-Testumgebung ist eingerichtet:
 
-1. Florian richtet VS Code, Git und die erforderliche Node.js-/npm-Umgebung lokal unter Windows ein. Versionen aus `.nvmrc`, `package.json` (`engines`, `packageManager`) und dem [installierten Projektstand](../context/architecture.md#phase-00-installierter-stand) ableiten, nicht eine ungeprüfte neueste Version wählen.
-2. Das öffentliche GitHub-Repository mit bestätigter URL in einen eigenständigen lokalen Checkout klonen und `dev` verwenden. Keine privaten absoluten Verzeichnisse in Projekttexte übernehmen. Vor jedem späteren Git-Abgleich lokale Änderungen prüfen und erhalten.
-3. Abhängigkeiten unter Windows selbst mit dem vorhandenen Lockfile und `.npmrc` einrichten. Der bestehende Installationsweg ist `npm ci --ignore-scripts`; keine erzwungene Peer-Auflösung und kein neues Lockfile als Fehlerumgehung. Dies ist eine Anleitung, keine in diesem Dokumentationsauftrag ausgeführte Installation.
-4. `node_modules`, `.next`, `out` und andere generierte Dateien pro Betriebssystem lokal erzeugen. Insbesondere `node_modules` niemals zwischen Ubuntu und Windows austauschen. Nach dem Clone Next-Typgenerierung durch Entwicklung oder Build gemäß [Root-README](../../README.md#prüfungen-und-statischer-export) berücksichtigen.
-5. Vorhandene Start-/Prüfbefehle lokal ausführen und den jeweiligen Entwicklungsstand in Opera öffnen. Tatsächliche Ergebnisse samt Browser-/OS-Version festhalten. Installation, Start und Darstellung des Grundgerüsts sind noch keine vollständige Browser-, Accessibility- oder Performance-Abnahme.
+| Bestandteil | Vom Nutzer bestätigter Stand |
+| --- | --- |
+| System / Editor | Windows 11, Visual Studio Code |
+| Git / Checkout | Git for Windows 2.56.0.windows.2; eigenständiger Checkout des öffentlichen GitHub-Repositories auf `dev` |
+| Node-Verwaltung | nvm-windows 2.0.1 im Shim-Modus |
+| Laufzeit | Node.js 24.22.0 / npm 11.19.1; entspricht der geprüften Ubuntu-Kombination und `.nvmrc`/Paketvorgaben |
+| Browser / Grafik | Opera; NVIDIA GeForce RTX 5070 Ti; keine daraus abgeleitete GPU-Abnahme |
 
-Vor Phase 01 Windows-Vorbereitung nachweisen; Phase 01 benötigt zusätzlich einen gesonderten Implementierungsauftrag. Zusätzliche Testframeworks oder CI sind keine Voraussetzung für diesen Vorbereitungsschritt.
+`npm ci` installierte laut Nutzer 360 Pakete; dabei erschien die bekannte Warnung zu ESLint 9.39.5. Die befristete Ausnahme und priorisierte ESLint-10-Migration bleiben unverändert. `.npmrc` deaktiviert Installationsskripte bereits projektweit. `npm run dev` startete lokal; `/`, `/de-DE/` und `/en-EN/` wurden in Opera angezeigt. Wiederholte Sprachrouten-Requests lieferten laut Nutzer HTTP 200. Detaillierter Nachweis, der beobachtete Devserver-Fehler und seine Prüfgrenzen stehen zentral in [open-items.md](open-items.md#windows-html-test-und-devmodus-routenbefund--17102026).
+
+Kein eigenständiger WebGL-, 3D-, GPU-Performance-, Accessibility- oder vollständiger visueller Abnahmetest. Browserversionsnummer, genauer Windows-Testcommit und vollständige Originalartefakte wurden in diesem Auftrag nicht separat übermittelt. Der erwähnte Screenshot zu `/en-EN/` ist Nutzerbeleg laut Bericht, hier nicht von Codex gesichtet. HTML-Portfolio und 3D-Welt bleiben unimplementiert; Phase 01 ist nicht begonnen und benötigt einen eigenen Auftrag.
+
+Für zusätzliche oder neu eingerichtete Test-Checkouts weiterhin:
+
+1. Git, VS Code und Node.js/npm anhand von `.nvmrc`, `package.json` (`engines`, `packageManager`) und dem [installierten Projektstand](../context/architecture.md#phase-00-installierter-stand) einrichten; keine ungeprüfte neueste Version voraussetzen.
+2. Mit bestätigter GitHub-URL eigenständig klonen und `dev` verwenden. Vor späteren Git-Abgleichen lokale Änderungen erhalten; keine privaten absoluten Verzeichnisse dokumentieren.
+3. Abhängigkeiten lokal mit Lockfile und `.npmrc` installieren; vorhandener Weg `npm ci --ignore-scripts`, ohne erzwungene Peer-Auflösung oder neues Lockfile als Fehlerumgehung.
+4. `node_modules`, `.next`, `out` und andere generierte Dateien pro Betriebssystem lokal erzeugen, niemals zwischen Ubuntu und Windows austauschen. Next-Typgenerierung gemäß [Root-README](../../README.md#prüfungen-und-statischer-export) berücksichtigen.
+5. Den konkreten Entwicklungsstand lokal starten und tatsächliche Ergebnisse samt Browser-/OS-Version festhalten. Erfolgreicher Start oder Build beweist keine vollständige Browser- oder visuelle Abnahme.
+
+Die frühere offene Windows-Grundeinrichtung ist für HTML-Tests erledigt. Devmodus-Befund und spätere fachliche Abnahmen bleiben getrennte offene Punkte; zusätzliche Testframeworks/CI sind keine Voraussetzung für den grundlegenden Testbetrieb.
 
 ## Ablauf pro Entwicklungsstand
 

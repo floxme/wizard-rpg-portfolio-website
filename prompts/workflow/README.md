@@ -2,7 +2,7 @@
 
 Von Florian bestätigte Reihenfolge. Eine Phase ist kein Einmalauftrag für die gesamte Website. Pro Sitzung einen überprüfbaren Umfang wählen, Ergebnis testen und anschließend weitergehen. Bestehende Implementierungen prüfen statt erneut erzeugen. Phasenstatus nur mit Nachweis und Dokumentationsfreigabe ändern.
 
-[Entwicklungs- und Testworkflow](../../docs/development/testing-workflow.md) ist die zentrale Prozessquelle: Ubuntu-Entwicklung/automatisierte Checks, Git-Übergabe und getrennte Windows-/Opera-Prüfung durch Florian. Keine Hostberechtigungen aus einer Vorlage ableiten; grüne Tests ersetzen keine visuelle Nutzerfreigabe. Windows-Vorbereitung ist vor Phase 01 noch offen; Phase 01 benötigt einen eigenen Auftrag und ist nicht begonnen.
+[Entwicklungs- und Testworkflow](../../docs/development/testing-workflow.md) ist die zentrale Prozessquelle: Ubuntu-Entwicklung/automatisierte Checks, Git-Übergabe und getrennte Windows-/Opera-Prüfung durch Florian. Keine Hostberechtigungen aus einer Vorlage ableiten; grüne Tests ersetzen keine visuelle Nutzerfreigabe. Windows-Grundeinrichtung und erster Opera-HTML-Test sind laut Nutzer erfolgt; offene Devmodus- und spätere Abnahmen bleiben in docs/development/open-items.md dokumentiert. Phase 01 benötigt einen eigenen Auftrag und ist nicht begonnen.
 
 | Phase | Auftrag |
 |---|---|

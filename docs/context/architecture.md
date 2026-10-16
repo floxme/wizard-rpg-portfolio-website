@@ -55,7 +55,7 @@ Frischer GitHub-Clone, sauberer Status direkt nach dem Clone, npm-Neuinstallatio
 
 ## Entwicklungs- und Testumgebungen
 
-Ubuntu in VirtualBox auf Windows bleibt primäre Entwicklungsumgebung mit VS Code/Codex, nativem Checkout und Chrome; Windows erhält einen eigenständigen Checkout für manuelle Grafiktests in Opera. Dessen Einrichtung ist vor Phase 01 noch offen. Die von Florian berichteten VM-Grafikgrenzen, Sicherheitsgrenze, Git-Übergabe, betriebssystemspezifische Installation und mögliche spätere Testarchitektur stehen zentral im [Testworkflow](../development/testing-workflow.md).
+Ubuntu in VirtualBox auf Windows bleibt primäre Entwicklungsumgebung mit VS Code/Codex, nativem Checkout und Chrome; Windows hat laut Florian einen eigenständigen Checkout auf `dev`; Grundeinrichtung, lokaler Start und erste HTML-Tests in Opera sind manuell bestätigt. Noch keine WebGL-/GPU-/Animationsabnahme. Die von Florian berichteten VM-Grafikgrenzen, Sicherheitsgrenze, Git-Übergabe, betriebssystemspezifische Installation und mögliche spätere Testarchitektur stehen zentral im [Testworkflow](../development/testing-workflow.md).
 
 Entwicklung auf `dev`, `main` geschützt; keine eigenständige Git-Veröffentlichung durch KI. Keine gemeinsam bearbeiteten Projektdateien oder geteilten `node_modules` zwischen Betriebssystemen. Vorhanden sind Typ-/Lint-/Format-/Build-Prüfungen; kein allgemeines Testskript und kein eingerichtetes Browser-Testframework. Keine CI-/Runner- oder Windows-Zugriffsinfrastruktur aus dieser Architektur ableiten. Produktstack, Paketversionen und ESLint-Ausnahme bleiben unverändert.
 
@@ -134,7 +134,7 @@ Die historische Node-Mindestangabe 20.9 ist keine aktuelle Projektfreigabe; maß
 
 ## Routing / Zustandsbewahrung
 
-Root und beide Präfixe werden bereits explizit statisch gebaut. Weitere feste HTML-Rubriken unter dem jeweiligen Sprachpräfix und vorab generierte Projektdetails bleiben Vorschläge; exakte Unterpfade in Phase 01 festlegen. `trailingSlash: true` ist eingerichtet. Weitergehende 404-, Reload-, History- und Browserprüfungen bleiben offen.
+Root und beide Präfixe werden bereits explizit statisch gebaut. Weitere feste HTML-Rubriken unter dem jeweiligen Sprachpräfix und vorab generierte Projektdetails bleiben Vorschläge; exakte Unterpfade in Phase 01 festlegen. `trailingSlash: true` ist eingerichtet. Erste Windows-/Opera-HTML-Tests sind von Florian bestätigt. Ubuntu-HTTP-Requests reproduzierten jedoch im Devmodus mit Next.js 16.4.2/Turbopack und `output: export` Missing-param-Fehler bei nicht generierten Pfaden; Details und installierte Codefundstelle im [Routenbefund](../development/open-items.md#windows-html-test-und-devmodus-routenbefund--17102026). `generateStaticParams` im Locale-Layout ist vorhanden und liefert beide Sprachwerte; kein belegter Fehler allein durch Layout-Export oder Route Groups. Keine technische Korrektur durchgeführt, kein dauerhafter Fix nachgewiesen. Weitergehende Reload-, History- und Browserprüfungen bleiben offen; Build und Devmodus getrennt bewerten.
 
 Die 3D-Szene erst beim Welt-Einstieg laden. HTML-Inhalte müssen ohne Canvas zugänglich bleiben. Ein Sprachwechsel darf keinen unbeabsichtigten World-Remount mit Spawn-Reset auslösen. Vorschlag: langlebiger Client-State außerhalb des wechselnden Sprachsegments bzw. explizite Übergabe des flüchtigen Weltzustands. Nur während derselben Sitzung, keine dauerhafte Positionsspeicherung.
 
