@@ -1,6 +1,6 @@
 # The Arcane Tower – Wizard RPG Portfolio
 
-Persönliches Entwicklerportfolio von Florian Metzger: freiwillige Third-Person-Fantasywelt und vollständiger HTML-Zugang als Produktziel. Stand: **16.10.2026**.
+Persönliches Entwicklerportfolio von Florian Metzger: freiwillige Third-Person-Fantasywelt und vollständiger HTML-Zugang als Produktziel. Stand: **17.10.2026**.
 
 ## Start hier
 
@@ -21,6 +21,12 @@ Das minimale Grundgerüst von Phase 00 ist implementiert: Next.js App Router, Re
 Alle Inhalte sind ausdrücklich Entwicklungsplatzhalter. Portfoliofunktionen und 3D-Welt sind noch nicht implementiert; Three.js, React Three Fiber, Drei und GSAP bleiben beschlossen, aber noch nicht installiert. Kein Canvas ist für die bestehenden Einstiege erforderlich.
 
 Typecheck, Linting, Formatprüfung und Produktionsbuild wurden im nativen Ubuntu-Checkout erneut erfolgreich ausgeführt. Sprachlinks und HTML-Sprachangaben waren bereits lokal per HTTP geprüft; die Browserdarstellung aller drei Einstiegspunkte wurde von Florian aus dem bisherigen Verlauf bestätigt und in dieser Abschlusssitzung nicht wiederholt. Eine vollständige Browser-, Barrierefreiheits- und Performance-Abnahme steht weiterhin aus. Quellen und Prüfgrenzen stehen zentral in [open-items.md](docs/development/open-items.md#tatsächlicher-nachweisstand).
+
+## Entwicklung und Abnahme
+
+Der [zentrale Testworkflow](docs/development/testing-workflow.md) beschreibt Ubuntu-Entwicklung und automatisierte Prüfungen, die isolierte Übergabe über GitHub sowie Florians manuelle Windows-/Opera-Abnahme. Chrome ist bevorzugter Ubuntu-Browser; die gemeldeten VM-Grafikgrenzen ersetzen keine realistischen Grafiktests. Die eigenständige Windows-Testumgebung ist vor Phase 01 noch einzurichten und nachzuweisen. Phase 01 ist nicht begonnen und benötigt einen eigenen Auftrag.
+
+Ein grüner automatisierter Test ist keine visuelle Nutzerfreigabe. Aktuelle Prüfwerkzeuge und Grenzen, optionale spätere Automation sowie Bugreport-Übergabe stehen im Workflow; keine Windows-Fernsteuerung oder zusätzliche Testinfrastruktur ist eingerichtet.
 
 ## Lokal einrichten und starten
 
@@ -66,7 +72,7 @@ Die explizite Deaktivierung der persistenten Turbopack-Dateisystem-Caches für E
 
 Das GitHub-Repository ist laut Florian öffentlich. Projekttexte sollen relative Repository-Pfade oder neutrale Beispiele verwenden und keine persönlichen absoluten Pfade enthalten. Eine Bereinigung aktueller Dateien entfernt bereits veröffentlichte Angaben nicht aus älteren Commits; die Git-Historie wurde nicht untersucht oder verändert.
 
-Florian übernimmt Commit und Sicherung auf `dev`; keine automatischen Commits, Pushes oder Deployments durch die KI. Git muss Anwendung, Lockfile, erforderliche Konfigurationen/Skripte, Dokumentation und benötigte freigegebene Assets enthalten. Die zentrale [Git-/Modellregel](docs/context/architecture.md#git-und-3d-modelle) schützt benötigte Modelle und Originale vor pauschaler Bereinigung.
+Florian übernimmt Commit und Sicherung auf `dev`; `main` bleibt geschützt; keine automatischen Commits, Pushes oder Deployments durch die KI. Git muss Anwendung, Lockfile, erforderliche Konfigurationen/Skripte, Dokumentation und benötigte freigegebene Assets enthalten. Die zentrale [Git-/Modellregel](docs/context/architecture.md#git-und-3d-modelle) schützt benötigte Modelle und Originale vor pauschaler Bereinigung.
 
 ## Historisches Übergabepaket
 

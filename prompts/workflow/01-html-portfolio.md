@@ -1,6 +1,6 @@
 # Phase 01 – HTML-Portfolio, Daten und Navigation
 
-Voraussetzung: Phase 0 geprüft.
+Voraussetzung: Phase 00 im benannten Umfang geprüft, offene Windows-Vorbereitung nach Testworkflow abgeschlossen und eigener Implementierungsauftrag für Phase 01 erteilt. Phase 01 ist derzeit nicht begonnen.
 
 Die Phase in kleine Aufträge teilen, nicht ungefragt alle Arbeitspakete auf einmal erledigen. Fehlende Fragen nur soweit für den nächsten Schritt nötig stellen.
 
@@ -9,7 +9,7 @@ Projektroot: [PFAD]
 Aktueller Stand: [PRÜFEN / BEKANNTER STAND]
 Umfang dieser Sitzung: [KLEINER TEILSCHRITT DIESER PHASE]
 
-Lies AGENTS.md, docs/context/README.md, docs/development/open-items.md, docs/development/roadmap.md und die relevanten Abnahmekriterien. Zusätzlich: docs/context/portfolio-and-content.md; docs/context/ui-and-navigation.md; docs/context/architecture.md; docs/design/mockups/portfolio/README.md.
+Lies AGENTS.md, docs/context/README.md, docs/development/open-items.md, docs/development/roadmap.md und die relevanten Abnahmekriterien. Zusätzlich: docs/context/portfolio-and-content.md; docs/context/ui-and-navigation.md; docs/context/architecture.md; docs/design/mockups/portfolio/README.md. Maßgeblicher Entwicklungs-/Testprozess: docs/development/testing-workflow.md.
 
 Alle Pfade ab Projektroot. Prüfe tatsächliche Dateien und Nutzeränderungen. Bei visuellen Aufgaben docs/design/README.md, zuständige Bereichs-README und die PNGs selbst lesen. Alle 29 Referenzen sind freigegeben; Original-PNGs/GLB nicht verändern. Arbeitsanweisungen gelten KI-unabhängig.
 
@@ -21,7 +21,7 @@ Baue Root/Sprachrouten und vier Hauptbereiche mit gemeinsamer Navigation bis Ebe
 Gehe mit kurzem Plan in einen überprüfbaren Teilschritt. Keine Käufe/Generierungen, Commits, Pushes oder Deployments ohne konkreten Auftrag; keine automatische Dokumentationsänderung. Fehlende persönliche Inhalte nicht aus Bildbeispielen übernehmen.
 
 Prüftor/Ergebnis:
-Alle vorgesehenen HTML-Ansichten bedienbar, keine erfundenen Inhalte; Route-/Sprach-/Mobil-/Tastaturprüfung mit ehrlichen Grenzen.
+Alle vorgesehenen HTML-Ansichten bedienbar, keine erfundenen Inhalte; Route-/Sprach-/Mobil-/Tastaturprüfung mit ehrlichen Grenzen. Automatische Ubuntu-Checks, tatsächliche Windows-/Opera-Prüfung und visuelle Layout-/Referenzfreigabe durch Florian separat belegen. Ein grüner Test ist keine visuelle Abnahme; nicht ausgeführte Prüfungen bleiben offen.
 Berichte tatsächliche Änderungen, Nachweise, nicht getestete Aspekte und den nächsten kleinen Schritt. Nicht bestandene Prüftore nicht durch Änderung der Anforderungen umgehen.
 
 Letzter Arbeitsschritt nach allen Implementierungs-/Testschritten: Prüfe Kontextdateien UND betroffene Prompts auf Konsistenz mit Dateiänderungen und wichtigen Entscheidungen. Bereits konkret beauftragte Dokumentationsänderungen im Umfang ausführen; sonst betroffene Datei, konkreten Textvorschlag/Diff, Nutzen und Auswirkungen nennen, ausdrücklich Bestätigung erfragen und vor dem Schreiben warten. Falls keine Anpassung nötig ist, dies als letzten Antwortpunkt bestätigen. Keine automatische Kontextpflege ohne Freigabe.

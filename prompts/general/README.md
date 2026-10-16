@@ -2,6 +2,8 @@
 
 Wiederverwendbare Vorlagen für abgegrenzte Aufgaben; kein automatischer Ablauf. Alle Pfade in kopierten Prompts beziehen sich auf den Projektroot. AGENTS.md bleibt verbindlich.
 
+[Entwicklungs- und Testworkflow](../../docs/development/testing-workflow.md) ist die zentrale Prozessquelle: Ubuntu-Entwicklung/automatisierte Checks, Git-Übergabe und getrennte Windows-/Opera-Prüfung durch Florian. Keine Hostberechtigungen aus einer Vorlage ableiten; grüne Tests ersetzen keine visuelle Nutzerfreigabe.
+
 | Vorlage | Einsatz |
 |---|---|
 | [01-project-start.md](01-project-start.md) | Projektstart |

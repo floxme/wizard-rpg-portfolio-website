@@ -1,6 +1,6 @@
 # The Arcane Tower – Arbeitsregeln für KI
 
-Stand: 16.10.2026. Eigentümer: Florian Metzger. Gilt für jede am Projekt arbeitende KI, unabhängig vom Anbieter oder Editor.
+Stand: 17.10.2026. Eigentümer: Florian Metzger. Gilt für jede am Projekt arbeitende KI, unabhängig vom Anbieter oder Editor.
 
 ## Einstieg und Quellen
 
@@ -58,6 +58,18 @@ Berufliches nur allgemein; toom Baumarkt darf genannt werden, interne Apps, Scre
 - Bei fehlendem Nachweis nicht raten; begrenzte überprüfbare Arbeit fortsetzen und Lücken benennen.
 - Platzhalter ausdrücklich kennzeichnen. Keine nicht vorhandenen Assets, Clips oder Lizenzen behaupten.
 - Regeln reduzieren Fehler, versprechen aber keine Unfehlbarkeit.
+
+## Entwicklungsumgebungen und Testnachweise
+
+Maßgeblicher Prozess: [Entwicklungs- und Testworkflow](docs/development/testing-workflow.md). Entwicklung und geeignete automatisierte Qualitätssicherung erfolgen im nativen Ubuntu-Checkout; Chrome ist dort bevorzugter Browser. Grafische Abnahme erfolgt durch Florian im separaten Windows-Checkout primär mit Opera. Windows-Einrichtung ist vor Phase 01 noch offen; dieser Dokumentationsauftrag beginnt Phase 01 nicht. VM-Grafikgrenzen nicht als Anwendungsfehler oder als Windows-Leistungsnachweis ausgeben.
+
+Die Isolation bleibt bestehen: Codex in Ubuntu greift nicht automatisch auf Windows-Dateien zu, führt dort keine Programme aus und steuert keinen Windows-Browser fern. Keine entsprechende Schnittstelle eigenständig einrichten. Freigegebene Stände über GitHub auf `dev` austauschen; `main` bleibt geschützt. Keine parallele Bearbeitung derselben Dateien in beiden Umgebungen, keine Übernahme von `node_modules` oder anderen generierten Ausgaben zwischen Betriebssystemen. Windows-Automation später nur gesondert freigegeben und zunächst lokal durch den Nutzer startbar, ohne zusätzliche Hostberechtigungen.
+
+**Ein erfolgreich abgeschlossener automatisierter Test beweist nicht, dass eine Animation natürlich aussieht, eine Kamerafahrt angenehm wirkt, ein Übergang optisch gelungen ist oder eine 3D-Szene den verbindlichen Mockups entspricht.** Dafür ist eine gesonderte visuelle Prüfung durch Florian erforderlich. Das gilt für Magieranimationen, Kristallpositionierung/-ausrichtung, Aktivierung, Teleport, Kamera, Welt-/HTML-Übergänge, Grafik/Licht/Effekte, Performance und Layout-/Referenzwirkung.
+
+Implementierung, automatisierte Prüfung, tatsächlicher Browserlauf und menschliche visuelle Freigabe getrennt berichten. Status gemäß Testworkflow: automatisch geprüft, manuell geprüft, fehlgeschlagen oder noch nicht geprüft, jeweils mit Beleg und Grenze. Keine Windows-/Opera-Abnahme und keine erhaltenen Screenshots/Traces behaupten, die nicht tatsächlich vorliegen. Visuelle Befunde erst untersuchen, dann gezielt beheben und angemessene Regressionen prüfen; manuelle Freigabe nicht aus grünen Tests ableiten.
+
+Das GitHub-Repository ist öffentlich; die Website ist noch nicht veröffentlicht. Nur bestätigte funktionierende Links, keine daraus erfundene UI-Implementierung. Testartefakte vor Veröffentlichung auf vertrauliche Inhalte prüfen; öffentliche Sichtbarkeit gibt lokale Dateien und Assets nicht automatisch frei. Keine CI, Runner, Testframeworks oder externen Dienste allein aus diesem Workflow einrichten.
 
 ## Umsetzung und Qualität
 

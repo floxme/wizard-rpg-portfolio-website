@@ -619,7 +619,7 @@ Ist das Repository privat, wird beispielsweise angezeigt:
 
 **Quellcode derzeit privat**
 
-Dies gilt insbesondere für The Arcane Tower, solange kein öffentlich zugängliches Repository vorhanden ist.
+Für The Arcane Tower gilt aktuell ein öffentliches GitHub-Repository; der Privat-Status ist hier überholt. Das bedingte Beispiel gilt nur für tatsächlich private andere Projekte. Öffentliche Sichtbarkeit ist kein Nachweis bereits implementierter UI-Links. Nur bestätigte, tatsächlich funktionierende Repository-Ziele aktiv verknüpfen; keine URL aus dem Mockup übernehmen oder erfinden. Maßgeblich: [Portfolioinhalte](../../../context/portfolio-and-content.md#eigene-projekte-und-kontakt). Layout und die verbindlichen PNG-Referenzen bleiben unverändert.
 
 Ein öffentliches GitHub-Profil darf unabhängig davon verlinkt werden.
 

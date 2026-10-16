@@ -1,6 +1,6 @@
 # Projekt und Umfang
 
-Stand: 16.10.2026. Phase 00 ist technisch initialisiert; der folgende Releaseumfang bleibt überwiegend beschlossener Sollzustand.
+Stand: 17.10.2026. Phase 00 ist technisch initialisiert; der folgende Releaseumfang bleibt überwiegend beschlossener Sollzustand.
 
 **The Arcane Tower – Wizard RPG Portfolio** ist Florians persönliches Entwicklerportfolio mit freiwilliger Third-Person-Fantasywelt und gleichwertigem HTML-Zugang. Öffentliche Berufsbezeichnung: SAP-Entwickler mit Fokus auf CAP, BTP und ABAP. toom Baumarkt darf genannt werden; keine internen Unternehmensdetails.
 
@@ -11,9 +11,11 @@ Stand: 16.10.2026. Phase 00 ist technisch initialisiert; der folgende Releaseumf
 | Implementiert und im benannten Umfang getestet | Minimales Next.js-/React-Grundgerüst, npm-Lockfile, TypeScript/Tailwind/ESLint/Prettier; statischer Export der drei Einstiegspunkte, lokale CLI-/HTTP-Prüfungen und erneut erfolgreiche Qualitätsprüfungen im nativen Ubuntu-Checkout. |
 | Implementiert, noch nicht vollständig getestet | Sprachwahl und HTML-Platzhalter unter `/`, `/de-DE/` und `/en-EN/`; Browserdarstellung laut Florian erfolgreich, vollständige Browser-, Tastatur-, Zoom-, Accessibility- und responsive Abnahme steht aus.                              |
 | Beschlossen, nicht implementiert               | Vier vollständige Portfolio-Hauptbereiche, Inhaltsmodell, 3D-Welt und die nachfolgend beschriebenen Releasefunktionen.                                              |
-| Geplant oder offen                             | Nächster Commit durch Florian, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen und priorisierte ESLint-10-Migration nach erfüllten Bedingungen.        |
+| Geplant oder offen                             | Windows-Testumgebung vor Phase 01, nächster Commit durch Florian, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen und priorisierte ESLint-10-Migration nach erfüllten Bedingungen.        |
 
 Alle derzeit sichtbaren Inhalte sind Entwicklungsplatzhalter. Root bietet noch keinen funktionierenden Welt-Einstieg, keine gespeicherte Sprachpräferenz oder Einstellungen; die fachlichen Anforderungen bleiben erhalten. Nachweise und offene Prüfungen: [open-items.md](../development/open-items.md). Der Installations-/Startablauf steht in der [Root-README](../../README.md).
+
+Phase 01 ist nicht begonnen. Zunächst steht die [Windows-Vorbereitung](../development/testing-workflow.md#offene-windows-vorbereitung-vor-phase-01) offen; danach ist ein eigener Implementierungsauftrag erforderlich. Entwicklung, automatisierte Nachweise und visuelle Nutzerfreigabe folgen dem zentralen Testworkflow.
 
 ## Erster Release – beschlossen, noch nicht vollständig implementiert
 

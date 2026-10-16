@@ -24,7 +24,7 @@ Für diesen Auftrag zusätzlich lesen: docs/context/portfolio-and-content.md, do
 Arbeitsauftrag:
 1. Verwende nur bestätigte Fakten. Frage bei fehlenden beruflichen Angaben, statt Rollen, Jahre oder Erfolge zu erfinden.
 2. Formuliere deutsch mit du, freundlich/professionell; englisch sinngemäß. Fantasybegriffe dürfen fachliche Aussagen nicht verschleiern.
-3. Prüfe Unternehmensvertraulichkeit, ehrliche KI-/Assetdarstellung und den Status des privaten Quellcodes.
+3. Prüfe Unternehmensvertraulichkeit und ehrliche KI-/Assetdarstellung. Das GitHub-Repository ist öffentlich; nur bestätigte funktionierende Quellcode-Links veröffentlichen und deren tatsächliche UI-Implementierung getrennt prüfen. Website noch nicht als veröffentlicht darstellen.
 4. Halte IDs und Textquellen für HTML/Welt konsistent; übersetze auch zugängliche Labels und Fehlermeldungen.
 5. Bei Entwurfsumfang nur Textvorschlag liefern. Bei ausdrücklich freigegebenem Einpflegen lokale Inhaltsdateien ändern und Konsistenz prüfen; Kontextdateien benötigen eigene Freigabe.
 

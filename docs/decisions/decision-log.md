@@ -1,6 +1,6 @@
 # Entscheidungsprotokoll
 
-Erstfassung: 15.10.2026. Konsolidiert: 16.10.2026.
+Erstfassung: 15.10.2026. Konsolidiert: 17.10.2026.
 
 Historische Einträge erklären frühere Entscheidungen. Aktueller Sollzustand steht in docs/context/. D30s Beschränkung auf zwei Bilder ist durch D31 abgelöst; D02 bleibt fachliche Trennung, nicht eigenständige Hauptnavigation. D19s fünf Interessen sind durch D32 ersetzt. D28s alte Promptablage ist durch D40 ersetzt. Die bei D41 noch offene Grundgerüst-Versionsauflösung ist inzwischen durch die dokumentierte Initialisierung D46 konkretisiert; spätere 3D-Versionen bleiben gesondert zu prüfen.
 
@@ -117,6 +117,21 @@ Der technische Initialisierungsschritt ist implementiert und begrenzt geprüft. 
 Quelle: Florians ausdrücklicher Abschlussauftrag und die darin bestätigten Ergebnisse des bisherigen Verlaufs; getrennt davon die erneuten Prüfungen der Abschlusssitzung. Dies aktualisiert den Status von D25 und D47, keine neue Entwicklungsphase.
 
 - **D47 umgesetzt:** Der aktive Checkout liegt auf dem nativen Ubuntu-Dateisystem. Frischer GitHub-Clone, Neuinstallation, Symlink-Test, Entwicklungsstart und Browserdarstellung sind von Florian bestätigt. Die beiden Workarounds sind aus der aktiven Konfiguration entfernt; Arbeitsort, `dev`, Konfiguration, npm-Symlinks und vier Qualitätsprüfungen wurden erneut erfolgreich geprüft. Einzelne Quellen und Grenzen zentral in [open-items.md](../development/open-items.md#tatsächlicher-nachweisstand). Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen.
-- **D25 aktualisiert:** Das GitHub-Repository ist laut Florian bereits öffentlich. Die frühere Privat-Annahme ist historisch. Kein öffentlicher Repository-Link wird erfunden; ein späterer UI-Link benötigt das bestätigte Ziel. Die älteren Privat-/UI-Formulierungen in [portfolio-and-content.md](../context/portfolio-and-content.md#eigene-projekte-und-kontakt) und [privacy-security-and-licenses.md](../context/privacy-security-and-licenses.md#veröffentlichung) sind noch separat zu korrigieren; diese beiden Dateien sind im Abschlussauftrag nur lesend freigegeben.
+- **D25 aktualisiert:** Das GitHub-Repository ist laut Florian bereits öffentlich. Die frühere Privat-Annahme ist historisch. Kein öffentlicher Repository-Link wird erfunden; ein späterer UI-Link benötigt das bestätigte Ziel. Die älteren Privat-/UI-Formulierungen in [portfolio-and-content.md](../context/portfolio-and-content.md#eigene-projekte-und-kontakt) und [privacy-security-and-licenses.md](../context/privacy-security-and-licenses.md#veröffentlichung) waren im damaligen Abschlussauftrag nur lesend freigegeben; sie wurden anschließend nach gesonderter Freigabe korrigiert. Öffentliche Repository-Sichtbarkeit und implementierte UI-Links bleiben getrennte Nachweise.
 - Öffentliche Projekttexte verwenden relative Repository-Pfade oder neutrale Beispiele; persönliche absolute Pfade und individuelle Mountbezeichnungen sind unnötig. Die historische Mountangabe in architecture.md wurde entfernt. Bereits veröffentlichte Angaben können in älteren Commits fortbestehen; keine Untersuchung der Git-Objektdatenbank, keine Historienumschreibung und kein Force-Push.
 - **D48 und D49 bleiben unverändert:** Befristete ESLint-9.39.5-Ausnahme, priorisierte ESLint-10-Migration mit allen Bedingungen und die bestehende Git-/Modellregel gelten weiter. Keine Migration, Assetbereinigung, Veröffentlichung oder Git-Schreiboperation in diesem Auftrag.
+
+## Entwicklungs- und Testworkflow vor Phase 01 – 17.10.2026
+
+Quelle: Florians ausdrücklicher Konsolidierungsauftrag. Umgebungsbefunde stammen aus seinem Bericht, keine hier ausgeführte Windows-/GPU-Abnahme. Maßgeblicher Prozess und vollständige Umgebungsdetails: [testing-workflow.md](../development/testing-workflow.md). Keine neue Produktfunktion oder Entwicklungsphase begonnen.
+
+| ID | Bestätigte Entscheidung | Folge |
+| --- | --- | --- |
+| D50 | Ubuntu-VM bleibt Entwicklungs-/Automationsort mit Chrome; eigenständiger Windows-Checkout für manuelle Grafiktests primär in Opera | Firefox bleibt optional; ergänzende Zielbrowser weiterhin prüfen. VM-Grafikgrenzen nicht als Anwendungsfehler ausgeben. |
+| D51 | Isolation bleibt; GitHub-Übergabe auf `dev`, `main` geschützt, lokale Abhängigkeiten pro Betriebssystem | Keine automatische Windows-Datei-/Programmausführungs-/Browserberechtigung; kein geteiltes `node_modules`, keine eigenständigen Änderungen an Windows-Sicherheit oder OPNsense. |
+| D52 | Zentraler Testworkflow mit Befundübergabe, Ursachenanalyse, gezieltem Fix und angemessenen Regressionstests | Vorhandene Checks nutzen; neue Testframeworks, CI oder Windows-Automation erst bedarfsorientiert und gesondert freigegeben. |
+| D53 | Automatische Funktionstests ersetzen keine menschliche visuelle Freigabe | Animation, Kamera, Übergänge, Grafik, Performance und Layout-/Mockup-Wirkung durch Florian separat prüfen; Belege und Prüfgrenzen trennen. |
+| D54 | Windows-Testumgebung noch nicht vollständig eingerichtet; offener Vorbereitungsschritt vor Phase 01 | Lokale Einrichtung und Opera-Start durch Florian nachweisen; Phase 01 braucht eigenen Auftrag. Keine Verzögerung durch vorsorglichen Aufbau zusätzlicher Testinfrastruktur. |
+| D55 | Öffentliches GitHub-Repository, Website weiterhin unveröffentlicht; A23 und illustrative Privat-Annahmen aktualisieren | Nur bestätigte funktionierende Links; UI-Implementierung separat nachweisen. `private: true` betrifft npm-Veröffentlichung und bleibt bestehen. Testartefakte vor Veröffentlichung prüfen; keine Historienbereinigung behaupten. |
+
+D48/D49, Produktstack, 29 PNGs, Originalasset-Schutz, Gameplay/Spracharchitektur und die nachrangige optionale EXE-Idee bleiben unverändert. Die Dokumentationskonsolidierung installiert keine Testframeworks und richtet keine CI oder Hostschnittstelle ein.

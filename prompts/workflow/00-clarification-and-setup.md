@@ -1,6 +1,6 @@
 # Phase 00 – Klärung und Initialisierung
 
-Stand 16.10.2026: Das minimale Grundgerüst ist initialisiert; der native Ubuntu-Checkout ist eingerichtet und die beiden Shared-Folder-Workarounds sind entfernt. Diese Vorlage dient auch begrenzten Nachprüfungen und dem Setup-Abschluss; vorhandenen Code, Lockfile und Konfigurationen prüfen statt erneut erzeugen. Nachweise und offene Grenzen in docs/development/open-items.md.
+Stand 17.10.2026: Das minimale Grundgerüst ist initialisiert; der native Ubuntu-Checkout ist eingerichtet und die beiden Shared-Folder-Workarounds sind entfernt. Diese Vorlage dient auch begrenzten Nachprüfungen und dem Setup-Abschluss; vorhandenen Code, Lockfile und Konfigurationen prüfen statt erneut erzeugen. Nachweise und offene Grenzen in docs/development/open-items.md.
 
 Die Phase in kleine Aufträge teilen, nicht ungefragt alle Arbeitspakete auf einmal erledigen. Fehlende Fragen nur soweit für den nächsten Schritt nötig stellen.
 
@@ -18,7 +18,7 @@ Erfinde keine APIs, Paketfunktionen, Inhalte, Rechte, Entscheidungen oder Prüfe
 Arbeitsauftrag:
 Klär nur Fragen, die den ausdrücklich beauftragten Teilschritt beeinflussen. npm und Produktstack bleiben beschlossen. Versionsangaben aus Architektur und tatsächlichen Dateien abgleichen; bei beauftragten Paketänderungen aktuelle offizielle Engines/Peers prüfen, keine Installation ungeprüfter latest-Kombinationen. Vorhandenes Grundgerüst nicht überschreiben; keine erneute Initialisierung, Paketänderung oder neue Testbibliothek aus dieser Vorlage allein ableiten.
 
-Initialisierung ist technisch nachgewiesen: Root-Sprachwahl ohne Redirect, /de-DE/ und /en-EN/, statischer Export und Qualitätswerkzeuge. Die volle Browserabnahme, Portfoliofunktionen und 3D-Welt fehlen noch. Kein Absenken der bestehenden Abnahmekriterien.
+Initialisierung ist technisch nachgewiesen: Root-Sprachwahl ohne Redirect, /de-DE/ und /en-EN/, statischer Export und Qualitätswerkzeuge. Die volle Browserabnahme, Portfoliofunktionen und 3D-Welt fehlen noch. Vor Phase 01 die offene eigenständige Windows-Einrichtung samt Opera-Start nach docs/development/testing-workflow.md nachweisen. Ubuntu-VM bleibt Entwicklungsort; keine Windows-Fernsteuerung oder geteilten Abhängigkeiten einrichten. Phase 01 nicht aus einem Setup-/Dokumentationsauftrag ableiten. Kein Absenken der bestehenden Abnahmekriterien.
 
 ESLint 9.39.5 bleibt die bestätigte befristete EOL-Ausnahme. Die priorisierte ESLint-10-Aufgabe und alle Migrationsbedingungen in open-items.md beachten; keine automatische Migration oder stillen Regelverluste. Der native Ubuntu-Checkout ist eingerichtet; bin-links=false und die expliziten persistenten Turbopack-Cache-Deaktivierungen sind entfernt. Clone, Neuinstallation, Entwicklungsstart und Browserdarstellung sind von Florian berichtet; Konfiguration, Symlinks und vier Qualitätsprüfungen wurden in der Abschlusssitzung erneut geprüft. Quellen und Grenzen zentral in open-items.md. Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen; keine erneute Installation oder Wiederherstellung historischer Workarounds aus dieser Vorlage ableiten.
 

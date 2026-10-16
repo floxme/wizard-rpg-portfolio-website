@@ -1,6 +1,6 @@
 # Projektphasen
 
-Stand: 16.10.2026. Von Florian bestätigte Reihenfolge. Phase 00 ist technisch initialisiert und dokumentiert; die echte Browserabnahme bleibt offen. Phase 01 bis 08 sind noch nicht umgesetzt. Fachliche Ziele bleiben Sollzustand, nicht automatisch Fortschrittsnachweise.
+Stand: 17.10.2026. Von Florian bestätigte Reihenfolge. Phase 00 ist technisch initialisiert und dokumentiert; die echte Browserabnahme bleibt offen. Phase 01 bis 08 sind noch nicht umgesetzt. Fachliche Ziele bleiben Sollzustand, nicht automatisch Fortschrittsnachweise.
 
 Jede Phase in kleine überprüfbare Aufträge teilen; nur unmittelbar relevante Fragen stellen. Zugänglichkeit, DE/EN, Fehlerfälle und Performance von Anfang an berücksichtigen. Kein ungefragtes Commit/Push/Deployment. Fehlende finale Assets blockieren den funktionalen Prototyp nicht.
 
@@ -21,6 +21,12 @@ Jede Phase in kleine überprüfbare Aufträge teilen; nur unmittelbar relevante 
 Phase 00 liefert ein geprüftes statisches Platzhalter-Grundgerüst mit npm-Lockfile und Qualitätswerkzeugen. Das ist weder das vollständige HTML-Portfolio aus Phase 01 noch ein Weltprototyp. Detaillierte Nachweise und Grenzen stehen ausschließlich in [open-items.md](open-items.md#tatsächlicher-nachweisstand), Versionen und Ausnahmen in [architecture.md](../context/architecture.md).
 
 Der native Ubuntu-Checkout ist eingerichtet, beide Shared-Folder-Workarounds sind entfernt und die Qualitätsprüfungen dort erneut erfolgreich. Clone, Neuinstallation, Entwicklungsstart und erste Browserdarstellung sind von Florian bestätigt; Quellen und Prüfgrenzen stehen zentral in open-items.md. Florian übernimmt den nächsten Commit auf `dev`. Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen. ESLint 9 bleibt vorläufig bewusst akzeptiert; die spätere ESLint-10-Migration ist priorisiert. Diese Restaufgaben starten nicht automatisch weitere Entwicklungsphasen. Phase 01 benötigt einen eigenen abgegrenzten Implementierungsauftrag.
+
+## Vorbereitung vor Phase 01
+
+Der [zentrale Testworkflow](testing-workflow.md) ist verbindlich. Zunächst den noch unvollständigen eigenständigen Windows-Checkout mit lokaler Toolchain und Opera durch Florian einrichten und den Start nachweisen. Ubuntu bleibt Entwicklungs-/Automationsort; Windows ist die separate grafische Testumgebung, ohne automatische Hostrechte für Codex. Phase 01 ist weiterhin nicht begonnen und benötigt anschließend einen gesonderten Auftrag.
+
+Geeignete Regressionstests und ergänzende Browserautomation passend zur tatsächlichen Funktion/Phase einführen. Neue Testframeworks, GitHub Actions oder Runner sind keine Voraussetzung für den Windows-Vorbereitungsschritt und dürfen Phase 01 nicht unnötig verzögern. Automatische Funktionsergebnisse und visuelle Nutzerfreigabe getrennt führen.
 
 ## Prüftore
 

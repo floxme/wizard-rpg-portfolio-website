@@ -1,6 +1,6 @@
 # Architektur
 
-Stand: 16.10.2026. Der Produktstack bleibt ausdrücklich beschlossen. Das minimale Grundgerüst von Phase 00 ist implementiert und im [Nachweisstand](../development/open-items.md#tatsächlicher-nachweisstand) geprüft. Spätere Architekturpatterns sind weiterhin Sollzustand; keine vollständige Produkt- oder Browserabnahme.
+Stand: 17.10.2026. Der Produktstack bleibt ausdrücklich beschlossen. Das minimale Grundgerüst von Phase 00 ist implementiert und im [Nachweisstand](../development/open-items.md#tatsächlicher-nachweisstand) geprüft. Spätere Architekturpatterns sind weiterhin Sollzustand; keine vollständige Produkt- oder Browserabnahme.
 
 ## Beschlossener Stack
 
@@ -52,6 +52,12 @@ Beide Workarounds sind aus der aktiven Konfiguration entfernt. In der Abschlusss
 Frischer GitHub-Clone, sauberer Status direkt nach dem Clone, npm-Neuinstallation, manueller Symlink-Test, Entwicklungsstart und Browserdarstellung der drei Einstiegspunkte wurden von Florian aus dem bisherigen Verlauf bestätigt. Keine erneute Installation oder Browserprüfung in dieser Abschlusssitzung. Quellen und einzelne Prüfgrenzen stehen zentral im [Nachweisstand](../development/open-items.md#tatsächlicher-nachweisstand). Vollständige Browser-/Accessibility-Abnahme und Performance-Messungen bleiben offen.
 
 `.npmrc` hält weiterhin exakte Versionen, strenge Engines/Peers und deaktivierte Installationsskripte fest. Kein `--force` oder `--legacy-peer-deps`. Die direkten Node-CLI-Aufrufe der npm-Skripte bleiben unverändert. Der Wrapper `scripts/next.mjs` deaktiviert Next-Telemetrie für Entwicklung und Build. Start-/Prüfbefehle und Reihenfolge nach einem Clone: [Root-README](../../README.md#lokal-einrichten-und-starten).
+
+## Entwicklungs- und Testumgebungen
+
+Ubuntu in VirtualBox auf Windows bleibt primäre Entwicklungsumgebung mit VS Code/Codex, nativem Checkout und Chrome; Windows erhält einen eigenständigen Checkout für manuelle Grafiktests in Opera. Dessen Einrichtung ist vor Phase 01 noch offen. Die von Florian berichteten VM-Grafikgrenzen, Sicherheitsgrenze, Git-Übergabe, betriebssystemspezifische Installation und mögliche spätere Testarchitektur stehen zentral im [Testworkflow](../development/testing-workflow.md).
+
+Entwicklung auf `dev`, `main` geschützt; keine eigenständige Git-Veröffentlichung durch KI. Keine gemeinsam bearbeiteten Projektdateien oder geteilten `node_modules` zwischen Betriebssystemen. Vorhanden sind Typ-/Lint-/Format-/Build-Prüfungen; kein allgemeines Testskript und kein eingerichtetes Browser-Testframework. Keine CI-/Runner- oder Windows-Zugriffsinfrastruktur aus dieser Architektur ableiten. Produktstack, Paketversionen und ESLint-Ausnahme bleiben unverändert.
 
 ## ESLint-9-Ausnahme und ESLint-10-Proof-of-Concept
 

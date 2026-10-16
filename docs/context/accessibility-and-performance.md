@@ -30,7 +30,9 @@ Dies sind Umsetzungsanforderungen, keine bereits nachgewiesene Konformitätszert
 
 Fehlendes WebGL, Ladefehler oder verlorener Rendering-Kontext: verständlicher Hinweis und direkter vollständiger HTML-Zugang. Kein endloser Loader. Gesperrter/beschädigter lokaler Speicher fällt auf Sitzungseinstellungen zurück. Audiofehler blockieren nicht. Verlust des Pointer Lock oder Tab-Fokus pausiert ungewollte Bewegung.
 
-Browser-Matrix als Umsetzungsvorschlag: aktuelle Desktop-Versionen von Chrome/Edge, Firefox, Safari und Opera (Florians Browser); mobile HTML-Prüfung in Safari/Chrome. Verfügbare Testgeräte und Mindestversionen noch festlegen. Ungetestete Browser explizit nennen. Pointer-Lock-Rückkehr und Sprachwechsel unter 3D sind frühe Prüftore.
+Entwicklungs-/Browserrollen und ergänzende Kompatibilitätsmatrix stehen im [Testworkflow](../development/testing-workflow.md#umgebungen-und-zuständigkeiten): Chrome bevorzugt in Ubuntu, Opera primär für manuelle Windows-Abnahme; Firefox bleibt optional. Windows ist noch nicht vollständig eingerichtet. Verfügbare Geräte und Mindestversionen noch festlegen; ungetestete Kombinationen ausdrücklich nennen. Pointer-Lock-Rückkehr und Sprachwechsel unter 3D bleiben frühe Prüftore.
+
+Die gemeldete GPU-/WebGL-Einschränkung der VM ist eine Umgebungsgrenze, kein nachgewiesener Anwendungsfehler. Performance auf der tatsächlichen Zielumgebung messen; daraus keine GPU-Leistung anderer Systeme ableiten. Automatische Zustands-/Ablaufprüfungen ersetzen keine visuelle Nutzerprüfung von Animationen, Kamerawirkung, Übergängen, Layout und Referenznähe. Details und Belegstatus: [visuelle Abnahme](../development/testing-workflow.md#visuelle-abnahme-durch-den-nutzer).
 
 ## Priorisiertes Laden und Ressourcen – Stand 16.10.2026
 

@@ -1,8 +1,14 @@
 # Offene Punkte und Nachweise
 
-Stand: 16.10.2026. Phase 00 ist technisch initialisiert und dokumentiert. Die folgenden Restaufgaben und Nachweise sind ausdrücklich vom beschlossenen, noch nicht implementierten Produktumfang getrennt. Fragen gezielt vor dem betroffenen Schritt stellen.
+Stand: 17.10.2026. Phase 00 ist technisch initialisiert und dokumentiert. Die folgenden Restaufgaben und Nachweise sind ausdrücklich vom beschlossenen, noch nicht implementierten Produktumfang getrennt. Fragen gezielt vor dem betroffenen Schritt stellen.
 
 ## Priorisierte technische Aufgaben
+
+### Vorbereitung vor Phase 01 – Windows-Testumgebung
+
+Windows-Testumgebung noch nicht vollständig eingerichtet. Florian richtet den eigenständigen `dev`-Checkout samt VS Code, Git, projektpassender Node.js-/npm-Umgebung, lokaler Installation und Start in Opera ein. Ablauf und Nachweise zentral im [Testworkflow](testing-workflow.md#offene-windows-vorbereitung-vor-phase-01). Keine Hostzugriffsrechte für Codex, kein Austausch von `node_modules` mit Ubuntu. Diese Vorbereitung vor Phase 01 nachweisen; Phase 01 ist nicht begonnen und braucht einen eigenen Implementierungsauftrag. Zusätzliche Testframeworks/CI sind keine Voraussetzung.
+
+Die von Florian berichteten VM-Grafikgrenzen sind im Workflow als Umgebungsbefunde eingeordnet, keine Anwendungsfehler oder Windows-Testergebnisse.
 
 ### P1 – Verbindliche ESLint-10-Migration
 
@@ -30,11 +36,11 @@ Florian übernimmt den nächsten Commit auf `dev` und die Sicherung. Performance
 
 ### P1 – Echte Browserabnahme des vorhandenen Grundgerüsts
 
-Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Für die vollständige Abnahme im nativen Checkout weiterhin Sprache/Links, direkter Aufruf/Reload, 404, Tastatur/Fokus, Zoom, responsive Ansichten, Accessibility und tatsächliche Browserkonsole prüfen; Browser, Version, Gerät und Ergebnis nennen. Diese Angaben fehlen für den berichteten Browserlauf. Keine vollständige Abnahme von A01/A02 oder A24/A26 allein aus CLI-/HTTP-Prüfungen oder der berichteten Darstellung ableiten. Weltwahl, gespeicherte Sprache und Portfolio-Unterseiten fehlen noch.
+Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Für die vollständige Abnahme nach dem [Testworkflow](testing-workflow.md) weiterhin Sprache/Links, direkter Aufruf/Reload, 404, Tastatur/Fokus, Zoom, responsive Ansichten, Accessibility und tatsächliche Browserkonsole prüfen; Browser, Version, Gerät und Ergebnis nennen. Diese Angaben fehlen für den berichteten Browserlauf. Keine vollständige Abnahme von A01/A02 oder A24/A26 allein aus CLI-/HTTP-Prüfungen oder der berichteten Darstellung ableiten. Weltwahl, gespeicherte Sprache und Portfolio-Unterseiten fehlen noch.
 
 ### Spätere technische Aufgaben
 
-- Geeignete Verhaltenstest-Werkzeuge erst bei konkretem Funktionsbedarf auswählen; Vitest/Testing Library/Playwright sind nicht installiert.
+- Geeignete Verhaltenstest-Werkzeuge erst bei konkretem Funktionsbedarf auswählen; Vitest/Testing Library/Playwright sind nicht installiert. Phasenbezogene Kandidaten und optionale CI-/Windows-Automation zentral im [Testworkflow](testing-workflow.md#vorhandene-prüfungen-und-mögliche-testarchitektur); kein zusätzlicher Infrastrukturblocker vor Phase 01.
 - Nur benötigte, freigegebene Modelle samt Abhängigkeiten tracken. Obsolete Modelle erst nach Nutzungsprüfung und ausdrücklicher Freigabe gezielt bereinigen; zentrale [Git-/Modellregel](../context/architecture.md#git-und-3d-modelle) beachten.
 - Modellintegration, praktische Animation, Performance und Veröffentlichungsrechte sind weiterhin offen.
 
@@ -42,7 +48,7 @@ Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Fü
 
 | Zeitpunkt                | Offene Entscheidung / Prüfung                                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Phase 00 – Restprüfungen | Vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
+| Phase 00 – Restprüfungen | Windows-Vorbereitung vor Phase 01, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
 | Phase 1                  | Konkrete statische Unterpfade/History, Scrollbewahrung, responsive Breiten, Übersetzungsschlüssel.                                                                        |
 | Phase 2                  | Maßstab, Kameraabstand, Kollisions-/Rampenparameter, Grenzen, Durchgänge, begehbare Flächen; Prototypmodell laden/abspielen.                                              |
 | Phase 3                  | Kristall-Anker und sichere Annäherung, Drehung, Animationstiming inklusive Teleport/Positionierung; etwa eine Sekunde nur Startvorschlag.                                 |
@@ -79,7 +85,7 @@ Stack beschlossen; installierte Grundgerüst-Versionen in [architecture.md](../c
 
 ## Tatsächlicher Nachweisstand
 
-Nachweise vom 16.10.2026. Drei Quellen getrennt halten: **erneut geprüft** bezeichnet die aktuelle Ubuntu-Abschlusssitzung; **von Florian berichtet** bezeichnet den im Auftrag bestätigten bisherigen Verlauf; **historisch** bezeichnet die früheren Initialisierungs-/Dokumentations- und PoC-Prüfungen. Keine dauerhafte vollständige Testlogsuite im Repository behaupten.
+Nachweise vom 16.10.2026. Drei Quellen getrennt halten: **erneut geprüft** bezeichnet in der folgenden Tabelle die Ubuntu-Abschlusssitzung vom 16.10.2026; **von Florian berichtet** bezeichnet den im Auftrag bestätigten bisherigen Verlauf; **historisch** bezeichnet die früheren Initialisierungs-/Dokumentations- und PoC-Prüfungen. Keine dauerhafte vollständige Testlogsuite im Repository behaupten.
 
 | Prüfung | Tatsächliches Ergebnis und Grenze |
 | --- | --- |
@@ -97,6 +103,12 @@ Nachweise vom 16.10.2026. Drei Quellen getrennt halten: **erneut geprüft** beze
 | Portfolio / 3D / Rechte | Portfoliofunktionen, Welt, Canvas und 3D-Integration nicht implementiert. Kein praktischer 3D-Rendering-/Animations-/Performance- oder vollständiger Rechtenachweis. |
 
 Nach Entfernung der Workarounds hat Florian keine erneuten Symlink- oder Turbopack-Dateisystemfehler berichtet. Auch die aktuellen Prüfungen ergaben solche Fehler nicht; daraus folgt keine allgemeine Fehlerfreiheit.
+
+### Dokumentationskonsolidierung vor Phase 01 – 17.10.2026
+
+In dieser Konsolidierung erneut in Ubuntu ausgeführt: `npm run typecheck`, `npm run lint`, `npm run format:check` und `npm run build`, jeweils Exitcode 0 ohne ausgegebene Warnungen. Der Build erzeugt weiterhin die drei Einstiegspunkte `/`, `/de-DE/` und `/en-EN/`. Typdateien und lokale Abhängigkeiten waren bereits vorhanden; keine Neuinstallation oder Windows-Reproduktion. Formatprüfung nimmt Dokumentation aus; deren Struktur, relative Links, Anker und Konsistenz wurden separat geprüft.
+
+Der zentrale Testworkflow und seine Verweise sind dokumentiert. Hardware-/VM-Grafikangaben stammen aus Florians Bericht vom 17.10.2026; Windows-Einrichtung, Opera-, WebGL-/GPU-, Accessibility- und visuelle Nutzerabnahme wurden hier nicht ausgeführt. Keine Testframeworks oder CI eingerichtet, keine Phase-01-Implementierung. Die historischen Nachweise oben behalten ihre ursprünglichen Quellen und Grenzen.
 
 Die ursprüngliche Dokumentations-/Archivprüfung (33 ursprüngliche Markdown-Dateien, 29 PNGs visuell, eine GLB strukturell mit Running/Walking) bleibt historisch in [revision-notes.md](revision-notes.md). Sie ist kein aktueller App-Status und keine praktische Modellabnahme.
 
