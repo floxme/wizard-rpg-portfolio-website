@@ -3,24 +3,36 @@ node_modules/
 .next/
 out/
 dist/
+build/
+next-env.d.ts
 coverage/
 playwright-report/
 test-results/
 *.tsbuildinfo
 *.log
 
+# Local tool caches
+.cache/
+.eslintcache
+.prettiercache
+
 # Local secrets; commit only a sanitized example
 .env*
 !.env.example
 
-# Local package exports and OS noise
+# Local package exports, OS noise and editor backups
 *.zip
 .DS_Store
 Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
 
-# Large original model sources: add only after an explicit asset/versioning decision
+# Unapproved additional original model sources; approved needed sources get explicit exceptions.
+# Runtime GLB/GLTF files under public/assets/ are not globally ignored.
 assets/source/**/*.glb
 assets/source/**/*.gltf
 
-# Benötigtes Magiermodell für den lokalen Prototyp
+# Approved wizard source model for the local prototype; preserve the original.
 !assets/source/characters/wandering-rune-mage/wandering-rune-mage_v1_rigged_walk.glb

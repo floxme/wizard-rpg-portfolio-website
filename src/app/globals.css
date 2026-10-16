@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-arcane-night: #101427;
+  --color-arcane-panel: #191f38;
+  --color-arcane-gold: #e8c77b;
+  --color-arcane-cyan: #8be4ed;
+  --color-arcane-text: #f1f2f8;
+  --color-arcane-muted: #c1c6dc;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-arcane-night);
+  color: var(--color-arcane-text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-arcane-cyan);
+  outline-offset: 5px;
+}

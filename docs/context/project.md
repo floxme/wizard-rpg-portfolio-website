@@ -1,10 +1,21 @@
 # Projekt und Umfang
 
-Stand: 16.10.2026. Beschlossener Sollzustand; noch keine Anwendung implementiert.
+Stand: 16.10.2026. Phase 00 ist technisch initialisiert; der folgende Releaseumfang bleibt überwiegend beschlossener Sollzustand.
 
 **The Arcane Tower – Wizard RPG Portfolio** ist Florians persönliches Entwicklerportfolio mit freiwilliger Third-Person-Fantasywelt und gleichwertigem HTML-Zugang. Öffentliche Berufsbezeichnung: SAP-Entwickler mit Fokus auf CAP, BTP und ABAP. toom Baumarkt darf genannt werden; keine internen Unternehmensdetails.
 
-## Erster Release
+## Erreichter Implementierungsstand
+
+| Zustand                                        | Umfang                                                                                                                                                              |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Implementiert und im benannten Umfang getestet | Minimales Next.js-/React-Grundgerüst, npm-Lockfile, TypeScript/Tailwind/ESLint/Prettier; statischer Export der drei Einstiegspunkte und lokale CLI-/HTTP-Prüfungen. |
+| Implementiert, noch nicht vollständig getestet | Sprachwahl und HTML-Platzhalter unter `/`, `/de-DE/` und `/en-EN/`; echte Browser-, Tastatur-, Zoom- und responsive Abnahme steht aus.                              |
+| Beschlossen, nicht implementiert               | Vier vollständige Portfolio-Hauptbereiche, Inhaltsmodell, 3D-Welt und die nachfolgend beschriebenen Releasefunktionen.                                              |
+| Geplant oder offen                             | Git-Sicherung durch Florian, Umzug auf natives Ubuntu-Dateisystem, erneute Umgebungsprüfung und priorisierte ESLint-10-Migration nach erfüllten Bedingungen.        |
+
+Alle derzeit sichtbaren Inhalte sind Entwicklungsplatzhalter. Root bietet noch keinen funktionierenden Welt-Einstieg, keine gespeicherte Sprachpräferenz oder Einstellungen; die fachlichen Anforderungen bleiben erhalten. Nachweise und offene Prüfungen: [open-items.md](../development/open-items.md). Der Installations-/Startablauf steht in der [Root-README](../../README.md).
+
+## Erster Release – beschlossen, noch nicht vollständig implementiert
 
 - Deutsch und Englisch unter `/de-DE/` und `/en-EN/`; Root mit Sprachwahl und beiden Einstiegen, ohne erzwungenen Redirect.
 - Desktop/Laptop mit Maus und Tastatur: optionale Welt. Smartphone/Tablet: vollständiges HTML-Portfolio, kein Touch-Gameplay.
@@ -21,7 +32,7 @@ Stand: 16.10.2026. Beschlossener Sollzustand; noch keine Anwendung implementiert
 
 Vollständig bedienbarer Prototyp zuerst: einfache Umgebung und vorhandenes Magier-Prototypmodell; fehlende Assets/Animationen sichtbar vorläufig ersetzen. Finale Gestaltung danach gemäß den 29 freigegebenen Referenzen. Die vorhandene GLB ist kein fertiges Produktionsmodell.
 
-Beschlossener Stack und offene Versionsauflösung: [architecture.md](architecture.md). Roadmap und passende Phasenprompts: [roadmap.md](../development/roadmap.md).
+Beschlossener Stack, tatsächlich installierte Versionen und spätere 3D-Integration: [architecture.md](architecture.md). Roadmap und passende Phasenprompts: [roadmap.md](../development/roadmap.md).
 
 Weitere Turmetagen, Touch-Spielsteuerung oder begründete spätere Infrastruktur sind Erweiterungsmöglichkeiten, keine Releasepflicht. Die Architect’s Chamber ist nicht beschlossen.
 

@@ -1,0 +1,14 @@
+AGENTS.md
+README.md
+docs/
+prompts/
+assets/
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+package-lock.json
+next-env.d.ts
+*.tsbuildinfo
