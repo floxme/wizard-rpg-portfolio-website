@@ -1,6 +1,6 @@
 # Verbindlicher Designindex
 
-Stand: 16.10.2026. Florian hat **alle 29 PNG-Dateien dieses Projektstands ausdrücklich ausgewählt**. Keine erneute Freigabe erforderlich. Sie bleiben unverändert an ihren bestehenden Pfaden. Für neue Referenzen gilt weiterhin ausdrückliche Freigabe.
+Stand: 17.10.2026. Florian hat **alle 29 ursprünglichen PNG-Mockups ausdrücklich ausgewählt**. Keine erneute Freigabe erforderlich. Sie bleiben unverändert an ihren bestehenden Pfaden. Für neue Referenzen gilt weiterhin ausdrückliche Freigabe.
 
 ## Lesen und Prioritäten
 
@@ -16,7 +16,9 @@ Die elf Portfolio-PNGs unten bleiben verbindliche visuelle Referenzen; sie sind 
 
 Die [frühe Portfolio-Assetstrategie](../context/assets.md#portfolio-assets-während-phase-01) ist bestätigt: notwendige Illustrationen, skalierbare SVG-/CSS-Elemente und echte UI-Komponenten bereits während Phase 01 schrittweise, jeweils mit gesondertem Produktionsauftrag sowie Rechte-/Technik-/Sichtfreigabe. Bestehende geeignete Motive bevorzugt wiederverwenden, keine vollständige UI als starres Bild. Neue Mockup-Entwürfe weiterhin mit drei Varianten und ausdrücklicher Auswahl; keine Änderung oder automatische Ausschneidung der Original-PNGs.
 
-Startscreen und Portfolio haben unterschiedliche Referenzzuständigkeiten: `ui-app-start-screen.png` für die lokalisierten Startscreens; die elf Portfolio-PNGs für das eigenständige HTML-/spätere Kristall-Portfolio. Fachliche URLs: [Portfolio und Inhalte](../context/portfolio-and-content.md#sprachen-und-routen). Konkrete Produktionsassets sind noch nicht generiert oder visuell freigegeben. Phasen 06/07 für spätere Welt-/Charakter-/Animationsassets bleiben erhalten; [Roadmap](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung).
+Startscreen und Portfolio haben unterschiedliche Referenzzuständigkeiten: `ui-app-start-screen.png` für die lokalisierten Startscreens; die elf Portfolio-PNGs für das eigenständige HTML-/spätere Kristall-Portfolio. Fachliche URLs: [Portfolio und Inhalte](../context/portfolio-and-content.md#sprachen-und-routen). Phasen 06/07 für spätere Welt-/Charakter-/Animationsassets bleiben erhalten; [Roadmap](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung).
+
+Davon getrennt sind inzwischen **sieben zusätzliche Portfolio-PNGs** mit ChatGPT/OpenAI erzeugt, vom Nutzer ausgewählt und im Checkout vorhanden: B01 Header-Hintergrund, B02 Sidebar-Illustration, D01 Kompassrose sowie D02-A Hauptpanel, D02-B Kartenrahmen, D02-C Überschriftenrahmen und D02-D reduzierter UI-Rahmen. Dateipfade, Metadaten, Freigaben und datierter Git-Tracking-Befund: [Asset-Inventar, Abschnitt 9](asset-inventory/arcane-portfolio-asset-inventar-phase-01.md#9-erstes-ausgewähltes-portfolio-asset-paket). B01/B02 sind Bildmotive; D01/D02-A bis D02-D sind PNG-Designvorlagen mit noch offener SVG-/CSS-Ausarbeitung. Appintegration, responsive/Performance- und Opera-Abnahme stehen aus; keine pauschale Rechtefreigabe. Sie ersetzen keine der 29 Referenzen und sind kein als Ganzes zu übernehmendes HTML-UI.
 
 ## Referenzinventar
 

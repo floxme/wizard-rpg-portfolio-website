@@ -6,6 +6,8 @@ Stand: 17.10.2026. Dateibestand und GLB-Struktur geprüft; keine Rendering-, Ani
 
 29 unveränderte PNG-Designreferenzen: 4 Character, 7 World, 7 UI, 11 Portfolio; vollständiger [Designindex](../design/README.md). Referenzen sind keine fertigen UI-, Modell- oder Animationsassets.
 
+Zusätzlich sind sieben mit ChatGPT/OpenAI erzeugte, vom Nutzer visuell ausgewählte Portfolio-PNGs im aktuellen Checkout vorhanden: B01/B02 als Bildmotive, D01 und D02-A bis D02-D als Designvorlagen. Sie gehören nicht zu den 29 ursprünglichen Mockups und ersetzen diese nicht. Alle sieben sind nicht in die App integriert und nicht im Browser abgenommen. Tatsächliche Pfade, Metadaten, Herkunft, Freigaben, datierter Git-Tracking-Befund und offene Prüfungen stehen zentral im [Asset-Inventar, Abschnitt 9](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md#9-erstes-ausgewähltes-portfolio-asset-paket).
+
 **Eine** GLB-Datei ist tatsächlich enthalten:
 
 `assets/source/characters/wandering-rune-mage/wandering-rune-mage_v1_rigged_walk.glb`
@@ -31,7 +33,7 @@ Vor Integration prüfen: Maßstab/Ausrichtung, Materialien/Texturen, Rig, vorhan
 
 ## Quellen und Laufzeit getrennt
 
-`assets/source/` bewahrt Originale (characters, environments, animations, audio). PNGs bleiben unter `docs/design/mockups/`. Optimierte benötigte Laufzeit-Ableitungen später unter `public/assets/` (models, textures, audio sowie nach Bedarf images/fonts/icons). Original-GLB und PNGs nicht überschreiben oder umbenennen.
+`assets/source/` bewahrt Originale (characters, environments, animations, audio). Die 29 ursprünglichen PNG-Mockups bleiben unter `docs/design/mockups/`. Die sieben neu ausgewählten Portfolio-PNGs liegen bereits unter `public/assets/portfolio/`; ihre Lage ist kein Nachweis einer technisch fertigen Laufzeitfassung. Optimierte benötigte Laufzeit-Ableitungen später unter `public/assets/` (models, textures, audio sowie nach Bedarf images/fonts/icons). Original-GLB, Mockups und ausgewählte PNG-Vorlagen nicht überschreiben oder umbenennen; Ableitungen nur separat und gesondert beauftragt.
 
 Nur benötigte Laufzeitdateien ausliefern, keine Quellarchive oder Referenzsammlung automatisch in public kopieren. Große Originale nicht ungefragt in Git aufnehmen; Git-LFS-/Speicherentscheidung gesondert. `.gitignore` schützt neue unversionierte GLB-Quellen, entfernt aber keine bereits getrackten Dateien.
 
@@ -47,7 +49,11 @@ Maßgebliche Planungsquelle: [Portfolio-Asset-Inventar Phase 01](../design/asset
 | Skalierbare Designelemente | SVG/CSS für Rahmen, Ornamente und weitere wiederverwendbare Dekoration; Bildgenerierung allein ist kein Nachweis sauberer SVG-Geometrie. |
 | Bedienbare Oberfläche | Echte React-/HTML-/CSS-Komponenten und übersetzbare Texte; vollständige Benutzeroberflächen nicht als starre Bilder integrieren. |
 
-Als erste Kandidaten sind **B01 Fantasy-Header**, **B02 Sidebar-Illustration**, **D01 Arkane Kompassrose** und **D02 Fantasy-Rahmensystem** vorgesehen. Nächster geplanter fachlicher Schritt ist ihre detaillierte Spezifikation, noch keine Erzeugung oder Integration. Die konkreten Produktionsassets sind nicht generiert und nicht visuell freigegeben. Die Strategie ist bestätigt; gesonderte Einzelproduktion bleibt offen. Die Abschnitte 7/8 des Inventars halten diesen Freigabestatus fest, die Inventarisierung bleibt erhalten.
+Das erste Paket ist inzwischen erstellt und als Motiv beziehungsweise PNG-Designvorlage ausgewählt: **B01 Fantasy-Header**, **B02 Sidebar-Illustration**, **D01 Arkane Kompassrose (Variante 3)** sowie **D02-A Hauptpanel (Variante 3), D02-B Kartenrahmen (Variante 2, separates Einzelbild), D02-C Überschriftenrahmen und D02-D kleiner UI-Rahmen**. Bei D02-D ist die reduzierte Gestaltung mit zwei seitlichen blauen Kristallen maßgeblich; stark verzierte Vorentwürfe wurden abgelehnt. D02 bleibt die gemeinsame Kategorie, andere Inventar-IDs bleiben unverändert. Diese konkrete Auswahl ergänzt die Strategie, ist jedoch keine technische Integrations- oder Releasefreigabe; weitere Motive bleiben gesondert zu beauftragen.
+
+B01 ist ausschließlich die Hintergrundillustration, kein vollständiger Header; B02 ist die Illustration mit Magier und Katze, keine Sidebar-Navigation. D01 bleibt bis zur gesonderten Umsetzung eine PNG-Vorlage für eine spätere SVG-Masterversion. D02-A bis D02-D sind Vorlagen für skalierbare SVG-/CSS- beziehungsweise echte HTML/CSS-Elemente, keine fertigen Komponenten. Lokal nachgewiesen: nur D01 hat einen Alphakanal mit transparenten Pixeln; alle anderen sechs PNGs sind undurchsichtig. Keine Transparenz oder beliebige verzerrungsfreie Skalierung unterstellen. Technische Rekonstruktion und visuelle Browserprüfung bleiben offen; B01/B02 benötigen Optimierung, responsive Zuschnitte und Prüfung des Ladeverhaltens. Keine Ableitungen oder Phase-01-Implementierung durch diesen Dokumentationsauftrag.
+
+Herkunft aller sieben PNGs laut Nutzer: Bildgenerierungsfunktion von ChatGPT/OpenAI, Auswahl aus Entwürfen durch Florian. Offizielle OpenAI-Bedingungen wurden für diesen Auftrag tatsächlich geöffnet; Quellenstand und Prüfgrenzen zentral im [Inventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md#herkunft-und-rechteprüfung). Das ersetzt keine abschließende Prüfung von Eingaberechten und möglichen Rechten Dritter für die vorgesehene öffentliche, möglicherweise kommerzielle Nutzung. Keine ausschließlichen Urheberrechte oder CC0-/CC-BY-Lizenz aus der Herkunft ableiten.
 
 Für jedes Produktionsasset vor Verwendung tatsächliche Herkunft, Lizenz/Nutzungsrechte, gegebenenfalls Attribution, Freigabestatus und technische Eignung nachvollziehbar prüfen und dokumentieren. „Generiert“ ist kein pauschaler Rechtenachweis. Neue einzelne Assets brauchen jeweils gesonderte Beauftragung und Freigabe; für neue Mockup-Entwürfe bleiben drei Varianten und ausdrückliche Auswahl verbindlich. Original-PNGs/GLB unverändert erhalten; Ableitungen nur separat im jeweils beauftragten Umfang.
 

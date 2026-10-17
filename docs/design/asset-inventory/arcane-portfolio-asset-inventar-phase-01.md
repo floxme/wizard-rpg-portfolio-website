@@ -1,8 +1,8 @@
 # The Arcane Tower – Vollständiges Portfolio-Asset-Inventar (Planungsstand)
 
-**Stand:** 17.10.2026 · **Basis:** unveränderte Repository-ZIP `wizard-rpg-portfolio-website-dev(1).zip`, elf PNG-Dateien unter `docs/design/mockups/portfolio/`, `docs/design/README.md`, `docs/design/mockups/portfolio/README.md`, `docs/context/assets.md`, `docs/context/portfolio-and-content.md`, `docs/context/ui-and-navigation.md` und `AGENTS.md`.
+**Stand:** 17.10.2026 · **Historische Analysebasis:** unveränderte Repository-ZIP `wizard-rpg-portfolio-website-dev(1).zip`, elf PNG-Dateien unter `docs/design/mockups/portfolio/`, `docs/design/README.md`, `docs/design/mockups/portfolio/README.md`, `docs/context/assets.md`, `docs/context/portfolio-and-content.md`, `docs/context/ui-and-navigation.md` und `AGENTS.md`. Der neue Dateinachweis im aktuellen Checkout steht getrennt in [Abschnitt 9](#9-erstes-ausgewähltes-portfolio-asset-paket).
 
-**Status:** Inventar und technische Empfehlung, **kein** genehmigter Produktionsasset-Satz und **keine** Implementierung. Freigegeben sind die elf **Mockups als Designreferenzen**; die nachstehend vorgeschlagenen neuen Einzelassets sind nicht automatisch freigegeben. Die PNG-Originale bleiben unverändert. Keine Änderungen am Repository vorgenommen.
+**Status:** Planungsinventar mit inzwischen sieben konkret ausgewählten PNG-Motiven beziehungsweise Designvorlagen gemäß Abschnitt 9, **keine** technisch abgenommene Assetintegration und **keine** Phase-01-Implementierung. Die elf ursprünglichen Portfolio-Mockups bleiben verbindliche Designreferenzen; weitere Inventarkandidaten sind nicht automatisch freigegeben. Original-PNGs bleiben unverändert. Der folgende ZIP-Dateibefund ist historisch, kein aktueller Nachweis eines fehlenden `public/`-Verzeichnisses.
 
 ## 0. Leseschlüssel
 
@@ -40,8 +40,8 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 
 | ID | Motiv / Bildslot | Fundstellen in den PNGs | Vorgesehene Wiederverwendung und Gestaltung | Weg | Prio |
 |---|---|---|---|---|---|
-| B01 | Nächtliches Turm-/Schloss-Panorama mit Wald, Mond, warmem Licht | Alle Desktop-Mockups als Header; `responsive-mobile` als Stilreferenz | Ein Hauptmotiv mit Desktop-/Mobile-Zuschnitten; mögliches zusätzliches Bild in About/Projekten, sofern Ausschnitt passt | Neu / vorhandene freigegebene Quelle prüfen | P1 |
-| B02 | Magier von hinten mit blauem Kristall vor Turm, Wasserfällen und Laternen | Als Bild unter der linken Sidebar in praktisch allen Desktopansichten; Motiv im Mobile-Sheet | Ein Motiv für Sidebar, optional kleinere Deko-Ausschnitte; **nicht** das ganze Sidebar-Interface rasterisieren | Neu, an Character-/World-Referenzen ausrichten | P1 |
+| B01 | Nächtliches Turm-/Schloss-Panorama mit Wald, Mond, warmem Licht | Alle Desktop-Mockups als Header; `responsive-mobile` als Stilreferenz | Ein Hauptmotiv mit Desktop-/Mobile-Zuschnitten; mögliches zusätzliches Bild in About/Projekten, sofern Ausschnitt passt | PNG-Bildmotiv erstellt und ausgewählt; technische Aufbereitung offen, siehe Abschnitt 9 | P1 |
+| B02 | Magier von hinten mit blauem Kristall vor Turm, Wasserfällen und Laternen | Als Bild unter der linken Sidebar in praktisch allen Desktopansichten; Motiv im Mobile-Sheet | Ein Motiv für Sidebar, optional kleinere Deko-Ausschnitte; **nicht** das ganze Sidebar-Interface rasterisieren | PNG-Bildmotiv mit Katze erstellt und ausgewählt; technische Aufbereitung offen, siehe Abschnitt 9 | P1 |
 | B03 | Charakterporträt des Wandering Rune Mage (frontal/halbseitig) | `main-overview` Profilspalte | Eine repräsentative RPG-Illustration im Rahmen; Silhouette/Kleidung mit freigegebenem Character-Design abstimmen | Neu auf Basis Character-Designreferenzen | P2 |
 | B04 | Gaming: magischer Gaming-Schreibtisch mit Bildschirm/Controller | `about-interests`, Beispiel `interest-detail` | Für Übersicht und als Detail-Hero verwendbar, wenn ausreichende Auflösung/Bildausschnitt | Neu | P2 |
 | B05 | Technology: arkanes Labor/Bibliothek, Monitore und leuchtende Sphäre | `about-interests` | Interesse-Vorschaubild, optional Detail-Hero | Neu | P2 |
@@ -99,6 +99,8 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 | D16 | Future-Project-Symbolik, Fragezeichen, Zaubertür/Schriftrolle | `projects-overview` dekorative Coming-Soon-Karten | ein konsistentes generisches SVG/CSS-Placeholder-System; **keine** fünf einzeln versprochenen Projekte bebildern | P2 |
 
 **Wichtig:** Bildgenerierung liefert gerenderte Bilder; sie garantiert **keine** saubere, skalierbare SVG-Geometrie, wiederverwendbare CSS-Rahmen oder rechtssichere Markenlogos. Für D01–D16 ist Bildgenerierung höchstens Entwurfs-/Stilhilfe, nicht automatisch das finale technische Format.
+
+Für D01 liegt inzwischen eine ausgewählte PNG-Vorlage vor. Die allgemeine Kategorie **D02** bleibt erhalten und wird durch die konkreten PNG-Untertypen **D02-A bis D02-D** ergänzt; D03–D16 werden nicht umnummeriert. Auswahl und Dateibefund: [Abschnitt 9](#9-erstes-ausgewähltes-portfolio-asset-paket). Die SVG-/CSS-Ziele oben bleiben noch umzusetzende technische Ziele.
 
 ## 3. Wiederverwendbare UI-Komponenten – ausdrücklich **keine** Bildassets
 
@@ -173,7 +175,7 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 
 **Status:** Der folgende Ablauf einschließlich der Nummerierung 01.1–01.8 ist eine **vorgeschlagene operative Unterteilung**, keine vollständige Freigabe von Implementierungs- oder Produktionsaufträgen. Maßgeblich ist die [Roadmap](../../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung); die Hauptphasen 00–08 bleiben bestehen. Phase 01 ist nicht implementiert.
 
-**Vorbereitungsblock vor dem vorgeschlagenen Paket 01.3:** Nächster geplanter fachlicher Schritt ist die detaillierte Spezifikation von **B01 Fantasy-Header, B02 Sidebar-Illustration, D01 Arkane Kompassrose und D02 Fantasy-Rahmensystem** anhand der elf Mockups. Noch keine Bilderzeugung, Assetintegration oder Produktionsfreigabe. Die folgenden Produktionsschritte setzen jeweils einen gesonderten Auftrag und die erforderlichen Freigaben voraus.
+**Vorbereitungsstand vor dem vorgeschlagenen Paket 01.3:** Das erste Paket aus **B01, B02, D01 und D02-A bis D02-D** ist gestalterisch ausgewählt; alle sieben PNGs sind im Checkout nachgewiesen. Dateinachweis und datierter Git-Tracking-Befund stehen in Abschnitt 9. Damit ist die frühere pauschale Aussage „noch keine Bilderzeugung oder visuelle Auswahl“ für dieses Paket abgelöst. Technische SVG-/CSS-Ausarbeitung, Bildoptimierung, responsive Zuschnitte und Browserabnahme bleiben offen. Die folgenden technischen Schritte und jede weitere Assetproduktion setzen jeweils einen gesonderten Auftrag und die erforderlichen Freigaben voraus; dieser Dokumentationsauftrag führt sie nicht aus.
 
 **01.3, Schritt I:** Nur einen vertikalen Prototyp aus *Header B01 + Seitenleiste B02 + Goldrahmen D02 + Kompassrose D01 + Beispielkarte C06* erstellen, inklusive responsivem Layout. Erst nach Prüfung auf alle Seiten übertragen.
 
@@ -198,8 +200,62 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 Offen bleiben:
 
 1. Genaue Ausgestaltung und Beauftragung der vorgeschlagenen operativen Arbeitspakete; keine pauschale Freigabe aller acht Implementierungsaufträge.
-2. Detaillierte Spezifikation der ersten Kandidaten **B01/B02/D01/D02** vor ihrer Produktion. Noch keine Generierung ohne weiteren Auftrag.
-3. Gesonderte Produktionsaufträge sowie Herkunfts-, Rechte-, Technik- und visuelle Freigaben für konkrete Einzelassets. Die Produktionsassets sind weiterhin nicht generiert und nicht visuell freigegeben.
+2. Technische Aufbereitung des bereits visuell ausgewählten ersten Pakets: D01 als spätere SVG-Masterversion, D02-A bis D02-D als skalierbare SVG-/CSS-/HTML-Elemente; B01/B02 optimieren und responsive Verwendung prüfen. Noch keine technische Umsetzung oder Browserfreigabe.
+3. Assetbezogene Rechteprüfung und Nachweise vor öffentlicher Verwendung abschließen; Quellenprüfung und verbleibende Grenzen in Abschnitt 9. Weitere Bildmotive und sonstige Inventarkandidaten benötigen gesonderte Produktionsaufträge und Auswahl; die sieben PNG-Freigaben geben sie nicht pauschal frei.
 4. Optionaler späterer Stilabgleich für eine Goldrahmen-Masterkomponente mit realen Browseransichten, bevor das gesamte Portfolio dieselben Ornamente nutzt.
 
-**Kontext-/Prompt-Abgleich:** Die bestätigten Entscheidungen A (Start-/Locale-/Portfolio-Routen), B (begrenzte frühe Portfolio-Assetstrategie) und C (separater Befüllungsschritt) sind in den zentralen Fachquellen, der Roadmap und den betroffenen Prompts dokumentiert. Die Statusangaben hier sind entsprechend abgeglichen; die Inventarisierung und historische Analysebasis in den Abschnitten 0–6 bleiben unverändert. Diese Dokumentationspflege ist kein Implementierungs-, Produktions- oder Testnachweis.
+**Kontext-/Prompt-Abgleich:** Entscheidungen A (Routen), B (begrenzte frühe Portfolio-Assetstrategie) und C (eigener Inhaltsschritt) bleiben erhalten. Die Kandidatenkategorien und historische Analysebasis bleiben bestehen; neue visuelle Freigaben und tatsächliche Dateinachweise sind in Abschnitt 9 getrennt ergänzt. Diese Dokumentationspflege ist keine Implementierungs-, Performance-, SVG-/CSS- oder Browserfreigabe. Veraltete Statusangaben in nicht freigegebenen Fachquellen/Prompts sind gesondert zur Korrektur vorzulegen.
+
+## 9. Erstes ausgewähltes Portfolio-Asset-Paket
+
+Stand der Bestandsprüfung: 17.10.2026. **Visuelle Auswahl durch Florian laut ausdrücklichem Auftrag**, kein von Codex ausgeführter Browser-Abnahmetest. Alle sieben Dateien wurden im aktuellen `dev`-Checkout gefunden, lokal betrachtet und mit vorhandenen Python-/Pillow-Werkzeugen auf PNG-Format, Decodierbarkeit, Abmessungen, Dateigröße und Alpha geprüft. Die 29 ursprünglichen Mockups einschließlich der elf Portfolio-Referenzen bleiben davon getrennt und unverändert.
+
+### Auswahl, Zweck und Weiterverwendung
+
+Für alle sieben Dateien gilt die vom Nutzer bestätigte Herkunft: **Mit der Bildgenerierungsfunktion von ChatGPT/OpenAI erzeugt und vom Nutzer aus den Entwürfen ausgewählt.** Ein konkreter Modellversionsname, der genaue Erstellungszeitpunkt und vollständige Erstellungsbelege wurden nicht übermittelt und werden nicht erfunden.
+
+Alle Pfade in der folgenden Tabelle relativ zum Repository-Root.
+
+| ID | Name / Zweck | Tatsächlicher Pfad | Visuelle Auswahl / geplante Weiterverwendung |
+| --- | --- | --- | --- |
+| B01 | Fantasy-Header: nächtliches Panorama mit dominanter warm beleuchteter Burg-/Turmanlage, Mond, Wald, Bergen und Wasser | `public/assets/portfolio/backgrounds/portfolio-header-fantasy.png` | Als Bildmotiv freigegeben; eigenständige Hintergrundillustration ohne UI-Texte. Kein fertiger Header mit Logo, Titel oder Sprachumschalter; spätere responsive Bildverwendung offen. |
+| B02 | Sidebar-Illustration: Wandering Rune Mage mit Katze, von hinten/seitlich vor einem hohen Magierturm, Cyanmagie und Stab | `public/assets/portfolio/illustrations/portfolio-sidebar-rune-mage.png` | Als hochformatiges Bildmotiv freigegeben; keine Sidebar-Navigation. Schmale Viewports, Zuschnitte und Performance noch prüfen. |
+| D01 | Goldene arkane Kompassrose mit Sternspitzen und ornamentalen Kreisen | `public/assets/portfolio/icons/arcane-compass-rose-gold.png` | Variante 3 als PNG-Designvorlage ausgewählt; wiederverwendbares Identitätsmerkmal. SVG-Masterversion erst später umsetzen und visuell prüfen. |
+| D02-A | Fantasy-Hauptpanel mit Goldrahmen, blauen arkanen Akzenten und dunkelblauer Inhaltsfläche | `public/assets/portfolio/frames/fantasy-frame-main.png` | Variante 3 als PNG-Designvorlage freigegeben; skalierbares SVG-/CSS-Hauptpanel vorgesehen, flexible Größen und Browserdarstellung offen. |
+| D02-B | Fantasy-Kartenrahmen mit goldenen Eckornamenten, blauen Kristallen und ruhiger dunkelblauer Fläche | `public/assets/portfolio/frames/fantasy-frame-card.png` | Variante 2 gewählt und als separates Einzelbild erstellt; PNG-Vorlage für wiederverwendbare Karten, skalierbare Umsetzung offen. |
+| D02-C | Breiter flacher Fantasy-Überschriftenrahmen mit Goldornamenten, blauen Kristallen und freier Innenfläche | `public/assets/portfolio/frames/fantasy-frame-heading.png` | Konkrete PNG-Variante ausgewählt; spätere echte HTML-Überschriften, responsive SVG-/CSS-Umsetzung und visuelle Prüfung offen. |
+| D02-D | Reduzierter goldener Rahmen für kleine UI-Elemente mit je einem kleinen blauen Kristall links und rechts | `public/assets/portfolio/frames/fantasy-frame-control.png` | PNG-Designvorlage für Buttons, Links und Sprachumschalter freigegeben. Frühere stark verzierte Entwürfe ausdrücklich abgelehnt; reduzierte Gestaltung maßgeblich. Wiederverwendbares HTML/CSS noch offen. |
+
+### Technischer Dateinachweis und Status
+
+Bei der **Bestandsprüfung am 17.10.2026 vor der geplanten Git-Übernahme** waren die sieben PNG-Dateien im lokalen Checkout vorhanden, aber noch **ungetrackt** und durch die vorhandene `.gitignore` nicht ausgeschlossen. Das ist ein datierter Befund, keine dauerhaft gültige Tracking-Aussage. Der aktuelle Git-Status ist direkt im Repository zu prüfen; die Verfügbarkeit in einem frischen Clone hängt vom tatsächlich übernommenen Git-Stand ab. Aus dieser Bestandsprüfung wird kein erfolgter Commit oder Push abgeleitet; Codex führt beides nicht aus. Die Lage unter `public/` beweist keine UI-Integration, Optimierung oder Website-Veröffentlichung; vor einer späteren öffentlichen Auslieferung die [Rechte-/Datenschutzregeln](../../context/privacy-security-and-licenses.md#assetrechte) beachten.
+
+| ID | Pixel | Bytes | Tatsächliches Format / Alpha | SHA-256 des geprüften Inhalts |
+| --- | --- | --- | --- | --- |
+| B01 | 2508 × 627 | 2.065.827 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `70f980aec2869efb382b063a1cdb94b938cfbf304f1bee241575ca8a801fcc6f` |
+| B02 | 1024 × 1536 | 2.773.761 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `b7426e632d02ea6af1042b1c2b1b296e1c4da3c7ed3a5131a2c1c51d26a64a59` |
+| D01 | 1254 × 1254 | 1.392.240 | PNG, RGBA, 8 Bit/Kanal; Alpha-Werte 0–255, transparente Pixel vorhanden | `c9740277d4e306242e58f07d39e7b66b53c3061d724a5303cae65db21032427e` |
+| D02-A | 1448 × 1086 | 2.062.646 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `fd238d5715dca9b0dda3f1594f3b8bf17ef7dee89a0849771919b47cad5d9f58` |
+| D02-B | 1086 × 1448 | 2.038.687 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `a6f6362567977a711c3cd513d2d263fbb668b80723482e4d4cd646842bfb419e` |
+| D02-C | 2172 × 724 | 1.941.020 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `91e085602c8084ac80138a47cddd7ca45952c07b0ce03ed7b297349f7e16f2a9` |
+| D02-D | 2048 × 768 | 1.747.830 | PNG, RGB, 8 Bit/Kanal; kein Alpha, keine Transparenz | `30861a2421d1dbbcfbaf59e00d29a276ed6301f49a6188ff04adf1e75fc83ce8` |
+
+Hashes dienen ausschließlich der Dateizuordnung, nicht als Rechte- oder Qualitätsnachweis. Abmessungen und Größen sind Istwerte, keine vorgegebenen Layoutmaße oder Performancebudgets.
+
+- **Visuell ausgewählt:** alle sieben Motive/Vorlagen durch den Nutzer bestätigt.
+- **Im Repository vorhanden:** alle sieben Dateien im lokalen Checkout zum datierten Prüfstand nachgewiesen; Tracking und Clone-Verfügbarkeit gemäß Bestandsvermerk oben gesondert prüfen.
+- **Technisch vorbereitet:** nur Metadaten, PNG-Decodierbarkeit und Alpha geprüft; keine Optimierung, Vektorisierung oder Komponentenarbeit durchgeführt, keine Produktionsreife bestätigt.
+- **In die App integriert:** noch nicht; keine Referenzen auf diese Dateien im vorhandenen Anwendungscode gefunden. Phase 01 bleibt nicht implementiert.
+- **Visuell im Browser abgenommen:** noch nicht; keine Opera-, responsive, Accessibility- oder Performance-Abnahme dieser Assets ausgeführt oder durch den Nutzer bestätigt.
+
+D01 und D02-A bis D02-D bleiben Rastervorlagen, keine SVGs. Die D02-PNGs enthalten ihren Hintergrund und sind nicht transparent. Ungeprüftes Strecken kann Ornamente verzerren; eine spätere SVG-/CSS-Rekonstruktion muss dem ausgewählten Design entsprechen und erneut vom Nutzer visuell geprüft werden. Ganze Rahmenbilder ersetzen keine bedienbare HTML-UI. B01/B02 benötigen vor Integration eine bedarfsgerechte Bildoptimierung sowie Prüfung von Zuschnitten, Bildgrößen und Ladeverhalten. Keine verbindlichen KB-/Pixelgrenzen ohne tatsächliche Layout- und Performancemessung; keine Ableitungen in diesem Auftrag.
+
+### Herkunft und Rechteprüfung
+
+Vorgesehen ist ein öffentliches Entwicklerportfolio mit möglicher kommerzieller Nutzung. Offizielle Quellen am 17.10.2026 tatsächlich geöffnet:
+
+- [OpenAI Europe Terms of Use](https://openai.com/policies/eu-terms-of-use/), aktualisiert 16.01.2026: Abschnitt „Content“ ordnet Output im Verhältnis zu OpenAI soweit rechtlich zulässig dem Nutzer zu; Output kann anderen Ergebnissen ähneln. Verantwortung für Eingaberechte und rechtmäßige Verwendung bleibt beim Nutzer. Für geschäftliche Verwendung enthält die Seite ein eigenes Addendum.
+- [OpenAI Help Center: kommerzielle Nutzung von ChatGPT-Output](https://help.openai.com/en/articles/6783457-what-is-chatgpt): nennt kommerzielle Nutzung unter Vorbehalt der Bedingungen und Richtlinien, unabhängig von kostenlosem oder bezahltem Plan.
+- [OpenAI Service Terms](https://openai.com/policies/service-terms/), aktualisiert 16.10.2026: ergänzende Regelungen, insbesondere zu Bild-/Videofunktionen in Abschnitt 6; kein assetbezogener Lizenznachweis allein durch den Seitenabruf.
+
+Die Quellenprüfung ist erfolgt, eine abschließende assetbezogene Rechteprüfung nicht. Kontobezogene Anwendbarkeit und Bedingungen zur Erstellungszeit sowie Rechte an verwendeten Eingaben und mögliche Rechte Dritter sind vor öffentlicher Verwendung angemessen zu klären. Es werden weder ausschließliche Urheberrechte noch Gemeinfreiheit, CC0 oder CC BY behauptet. Konkrete Modellversion, Lizenzurkunde und pauschale Rechtsfreiheit werden nicht aus der ChatGPT-Herkunft abgeleitet. Herkunft ist als Nutzerangabe dokumentiert; keine unabhängige Prüfung privater Erstellungsunterlagen. Maßgeblich bleiben die [zentralen Rechtevorgaben](../../context/privacy-security-and-licenses.md#assetrechte).
