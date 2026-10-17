@@ -1,6 +1,6 @@
 # Assetbestand, Prototyp und Beschaffung
 
-Stand: 16.10.2026. Dateibestand und GLB-Struktur geprüft; keine Rendering-, Animations- oder Lizenzfreigabe daraus ableiten.
+Stand: 17.10.2026. Dateibestand und GLB-Struktur geprüft; keine Rendering-, Animations- oder Lizenzfreigabe daraus ableiten.
 
 ## Vorhandener Bestand
 
@@ -34,6 +34,24 @@ Vor Integration prüfen: Maßstab/Ausrichtung, Materialien/Texturen, Rig, vorhan
 `assets/source/` bewahrt Originale (characters, environments, animations, audio). PNGs bleiben unter `docs/design/mockups/`. Optimierte benötigte Laufzeit-Ableitungen später unter `public/assets/` (models, textures, audio sowie nach Bedarf images/fonts/icons). Original-GLB und PNGs nicht überschreiben oder umbenennen.
 
 Nur benötigte Laufzeitdateien ausliefern, keine Quellarchive oder Referenzsammlung automatisch in public kopieren. Große Originale nicht ungefragt in Git aufnehmen; Git-LFS-/Speicherentscheidung gesondert. `.gitignore` schützt neue unversionierte GLB-Quellen, entfernt aber keine bereits getrackten Dateien.
+
+## Portfolio-Assets während Phase 01
+
+**Bestätigte begrenzte Ausnahme zur bisherigen Reihenfolge „erst funktionaler Prototyp, dann finale Assets“:** Benötigte visuelle HTML-Portfolio-Assets werden schrittweise bereits während Phase 01 vorbereitet, erstellt, freigegeben und integriert. Das ist eine beschlossene Strategie, kein aktueller Produktions- oder Implementierungsauftrag. Sie orientiert sich an den elf freigegebenen Portfolio-PNGs und umfasst notwendige Fantasy-Hintergründe, Header-/Sidebar-Illustrationen, Charakter-/Interessenbilder, Rahmen/Ornamente, Schriften/Icons sowie wiederverwendbare Fantasy-Karten und UI-Komponenten.
+
+Maßgebliche Planungsquelle: [Portfolio-Asset-Inventar Phase 01](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md). Die 18 Bildmotiv-Kandidaten und weiteren Designasset-, Komponenten- und Medienkategorien sind Planungsgrößen, keine Pflicht zur Erzeugung einer festen Dateizahl und keine automatische Freigabe aller vorgeschlagenen Funktionen/Einzelassets. Die im Inventar verwendeten Nummern 01.1–01.8 bleiben die [vorgeschlagene operative Unterteilung](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung).
+
+| Kategorie | Vorgehen |
+| --- | --- |
+| Generierte Illustrationen | Getrennte Bildmotive und geeignete Zuschnitte; vorhandene freigegebene Motive bevorzugt wiederverwenden. Keine echten Screenshots oder bestätigten persönlichen Fakten vortäuschen. |
+| Skalierbare Designelemente | SVG/CSS für Rahmen, Ornamente und weitere wiederverwendbare Dekoration; Bildgenerierung allein ist kein Nachweis sauberer SVG-Geometrie. |
+| Bedienbare Oberfläche | Echte React-/HTML-/CSS-Komponenten und übersetzbare Texte; vollständige Benutzeroberflächen nicht als starre Bilder integrieren. |
+
+Als erste Kandidaten sind **B01 Fantasy-Header**, **B02 Sidebar-Illustration**, **D01 Arkane Kompassrose** und **D02 Fantasy-Rahmensystem** vorgesehen. Nächster geplanter fachlicher Schritt ist ihre detaillierte Spezifikation, noch keine Erzeugung oder Integration. Die konkreten Produktionsassets sind nicht generiert und nicht visuell freigegeben. Die Strategie ist bestätigt; gesonderte Einzelproduktion bleibt offen. Die Abschnitte 7/8 des Inventars halten diesen Freigabestatus fest, die Inventarisierung bleibt erhalten.
+
+Für jedes Produktionsasset vor Verwendung tatsächliche Herkunft, Lizenz/Nutzungsrechte, gegebenenfalls Attribution, Freigabestatus und technische Eignung nachvollziehbar prüfen und dokumentieren. „Generiert“ ist kein pauschaler Rechtenachweis. Neue einzelne Assets brauchen jeweils gesonderte Beauftragung und Freigabe; für neue Mockup-Entwürfe bleiben drei Varianten und ausdrückliche Auswahl verbindlich. Original-PNGs/GLB unverändert erhalten; Ableitungen nur separat im jeweils beauftragten Umfang.
+
+Die Ausnahme verlagert keine Weltproduktion nach Phase 01. Phasen 06 und 07 bleiben für finale Welt-, Charakter-, Animations- und weitere Assetarbeiten nach dem funktionalen Prototyp zuständig. Die nachfolgende Standardasset-/Meshy-Strategie bleibt für diesen späteren Bedarf bestehen. Phase 08 mit Inhaltsfinalisierung, Qualität und Releaseprüfung bleibt ebenfalls erhalten.
 
 ## Beschaffungsstrategie
 

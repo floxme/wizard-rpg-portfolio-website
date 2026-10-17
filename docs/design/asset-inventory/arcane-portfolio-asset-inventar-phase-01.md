@@ -171,7 +171,9 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 
 ## 7. Empfohlener Produktionsablauf
 
-**Vorbereitungsblock vor 01.3:** Diese Inventarliste prüfen und freigeben; verbindlichen Stil aus den elf Mockups ableiten; die ersten zu erzeugenden Bildmotive B01/B02 und die technische Umsetzung von D01–D03 festlegen.
+**Status:** Der folgende Ablauf einschließlich der Nummerierung 01.1–01.8 ist eine **vorgeschlagene operative Unterteilung**, keine vollständige Freigabe von Implementierungs- oder Produktionsaufträgen. Maßgeblich ist die [Roadmap](../../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung); die Hauptphasen 00–08 bleiben bestehen. Phase 01 ist nicht implementiert.
+
+**Vorbereitungsblock vor dem vorgeschlagenen Paket 01.3:** Nächster geplanter fachlicher Schritt ist die detaillierte Spezifikation von **B01 Fantasy-Header, B02 Sidebar-Illustration, D01 Arkane Kompassrose und D02 Fantasy-Rahmensystem** anhand der elf Mockups. Noch keine Bilderzeugung, Assetintegration oder Produktionsfreigabe. Die folgenden Produktionsschritte setzen jeweils einen gesonderten Auftrag und die erforderlichen Freigaben voraus.
 
 **01.3, Schritt I:** Nur einen vertikalen Prototyp aus *Header B01 + Seitenleiste B02 + Goldrahmen D02 + Kompassrose D01 + Beispielkarte C06* erstellen, inklusive responsivem Layout. Erst nach Prüfung auf alle Seiten übertragen.
 
@@ -191,8 +193,13 @@ Diese **18 Kandidaten** bilden ein vollständiges Motiv-Inventar für die in den
 
 ## 8. Offene Freigaben
 
-1. Freigabe der **Assetstrategie:** 18 Bildmotiv-Kandidaten mit konsequenter Wiederverwendung, SVG/CSS für Rahmen/Ornamente und echte HTML/React-Komponenten.
-2. Festlegen, ob **B01 und B02** als erste Bilderzeugungsaufgaben vorbereitet werden sollen. Noch keine Generierung ohne weiteren Auftrag.
-3. Optionaler späterer Stilabgleich für eine Goldrahmen-Masterkomponente mit realen Browseransichten, bevor das gesamte Portfolio dieselben Ornamente nutzt.
+**Bestätigt ist die Assetstrategie:** Notwendige visuelle HTML-Portfolio-Assets schrittweise bereits während Phase 01, mit konsequenter Wiederverwendung, getrennten Illustrationen, SVG/CSS für Rahmen/Ornamente und echten HTML/React-Komponenten. Die 18 Bildmotiv-Kandidaten sind Planungsgrößen, keine verpflichtende Anzahl neu zu erzeugender Dateien. Zentrale Regel: [Assets](../../context/assets.md#portfolio-assets-während-phase-01). Die begrenzte Ausnahme ersetzt weder spätere Welt-/Charakter-/Animationsassetarbeit in Phasen 06/07 noch die Inhaltsfinalisierung und Releaseprüfung in Phase 08.
 
-**Kontext-/Prompt-Abgleich:** Die neu vereinbarten Entscheidungen A (Start-/Locale-/Portfolio-Routen) und C (separater Befüllungsschritt) sowie die präzisierte Assetstrategie B sollten vor einem Codex-Auftrag auf betroffene Kontext-/Roadmap-/Promptdateien abgeglichen und nur nach entsprechender Freigabe aktualisiert werden. Die ZIP-Dokumentation wurde nicht verändert.
+Offen bleiben:
+
+1. Genaue Ausgestaltung und Beauftragung der vorgeschlagenen operativen Arbeitspakete; keine pauschale Freigabe aller acht Implementierungsaufträge.
+2. Detaillierte Spezifikation der ersten Kandidaten **B01/B02/D01/D02** vor ihrer Produktion. Noch keine Generierung ohne weiteren Auftrag.
+3. Gesonderte Produktionsaufträge sowie Herkunfts-, Rechte-, Technik- und visuelle Freigaben für konkrete Einzelassets. Die Produktionsassets sind weiterhin nicht generiert und nicht visuell freigegeben.
+4. Optionaler späterer Stilabgleich für eine Goldrahmen-Masterkomponente mit realen Browseransichten, bevor das gesamte Portfolio dieselben Ornamente nutzt.
+
+**Kontext-/Prompt-Abgleich:** Die bestätigten Entscheidungen A (Start-/Locale-/Portfolio-Routen), B (begrenzte frühe Portfolio-Assetstrategie) und C (separater Befüllungsschritt) sind in den zentralen Fachquellen, der Roadmap und den betroffenen Prompts dokumentiert. Die Statusangaben hier sind entsprechend abgeglichen; die Inventarisierung und historische Analysebasis in den Abschnitten 0–6 bleiben unverändert. Diese Dokumentationspflege ist kein Implementierungs-, Produktions- oder Testnachweis.

@@ -4,9 +4,9 @@ Sollzustand, noch kein Testprotokoll. Für jeden späteren Test Browser/Gerät, 
 
 | ID | Prüffall und erwartetes Ergebnis |
 |---|---|
-| A01 | `/` zeigt Sprachwahl und beide Einstiege; gespeicherte Sprache ist vorausgewählt, kein erzwungener Redirect. |
-| A02 | `/de-DE/` und `/en-EN/` funktionieren nach statischem Build auch bei direktem Aufruf/Reload; URL-Sprache gewinnt gegen gespeicherte Wahl. |
-| A03 | Direkter HTML-Einstieg liefert alle vier Hauptbereiche und vorgesehenen Unterseiten ohne Weltzwang; mobile Nutzung braucht kein WebGL. |
+| A01 | `/` zeigt ausschließlich die vorgeschaltete Sprachwahl; eine vorhandene gespeicherte Sprache ist vorausgewählt. Die Sprachauswahl führt zum passenden lokalisierten Startscreen, ohne automatischen oder erzwungenen Redirect. |
+| A02 | `/de-DE/` und `/en-EN/` zeigen lokalisierte Startscreens mit beiden Einstiegen „Welt betreten“ und „Portfolio direkt öffnen“; sie funktionieren nach statischem Build auch bei direktem Aufruf/Reload. URL-Sprache gewinnt gegen gespeicherte Wahl. |
+| A03 | `/de-DE/portfolio/` und `/en-EN/portfolio/` liefern beim direkten HTML-Einstieg alle vier Hauptbereiche und vorgesehenen Unterseiten ohne Weltzwang, auch nach statischem Build und bei direktem Aufruf/Reload; mobile Nutzung braucht kein WebGL. Konkrete Bereichs-/Detail-URLs vor Implementierung gesondert festlegen, gemäß [Routingquelle](../context/portfolio-and-content.md#sprachen-und-routen). |
 | A04 | Sprachenwechsel in Portfolio-Detail erhält dieselbe Inhalts-ID; in der Welt bleibt Position erhalten. |
 | A05 | Welt startet draußen am Spawn. Turmraum begehbar; Kristall darin; Schild am Spawn, Schmiede und Garten erreichbar. |
 | A06 | WASD/Shift funktionieren, kein Springen; Kamera reagiert nur im Gameplay auf Maus. Q gibt Cursor frei/fordert Gameplay an. |

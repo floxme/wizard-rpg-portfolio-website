@@ -41,6 +41,8 @@ Verbindlicher Stack: Next.js App Router, React, TypeScript, Three.js, React Thre
 
 Vollständiges HTML-Portfolio auf allen Geräten; optionale Desktop-3D-Welt; kein Touch-Gameplay im ersten Release. Kein Springen, Klettern, Kampf oder Fallschaden. Erst funktionaler Prototyp, dann finale Ausarbeitung.
 
+Bestätigte begrenzte Ausnahme: Ausschließlich notwendige visuelle HTML-Portfolio-Assets dürfen bereits während Phase 01 schrittweise vorbereitet, erstellt, freigegeben und integriert werden; maßgeblich ist [docs/context/assets.md](docs/context/assets.md#portfolio-assets-während-phase-01). Neue einzelne Assets benötigen weiterhin gesonderte Beauftragung und Freigabe. Die bisherigen Prototyp-, Entwicklungs- und Freigaberegeln bleiben bestehen; spätere finale Welt-, Charakter- und Animationsassetarbeit verbleibt in Phasen 06/07.
+
 Alle **29 PNGs des gelieferten Projektstands** sind verbindliche visuelle Referenzen, gegliedert in Character (4), World (7), UI (7), Portfolio (11). Zuständigkeiten und vollständige Pfade: `docs/design/README.md`. Neue Bilder benötigen weiterhin ausdrückliche Freigabe. Alte nicht enthaltene Chatbilder sind keine aktuellen Referenzen. Referenzfreigabe macht Beispieltexte, Logos, Skillwerte oder erfundene Personendaten nicht wahr.
 
 UI bleibt echtes bedienbares HTML; kein ganzes Mockup als funktionslose Oberfläche. Indigo/Blau, Gold/Messing, Cyan/Teal, warme Lichtakzente und arkane Motive bilden das gemeinsame Design. Kein globaler Pixelfilter über der 3D-Welt.

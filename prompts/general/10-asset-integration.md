@@ -20,9 +20,9 @@ Erfinde keine APIs, Fakten, Inhalte, Testergebnisse oder Entscheidungen. Nutze o
 
 Ändere AGENTS.md, README.md, docs/ oder prompts/ nur, wenn ich die konkrete Änderung ausdrücklich beauftragt oder nach Erklärung genehmigt habe. Ansonsten nenne Datei, geplante Änderung und Nutzen, frage und warte. Kein eigenständiger Commit, Push oder Deployment. Keine Einführung von Backend, Datenbank, Tracking oder neuen Produktfunktionen ohne Freigabe.
 
-Für diesen Auftrag zusätzlich lesen: docs/context/assets.md, docs/context/world-and-design.md, docs/context/privacy-security-and-licenses.md.
+Für diesen Auftrag zusätzlich lesen: docs/context/assets.md, docs/context/world-and-design.md, docs/context/privacy-security-and-licenses.md. Bei HTML-Portfolio-Assets zusätzlich docs/design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md und die elf Portfolio-Referenzen; Inventar ist Planung, kein freigegebener Produktionssatz.
 
-Zusätzlicher Projektfokus: Vorhandene GLB ist Prototyp, nur Running/Walking strukturell nachgewiesen. Fehlende Clips vorläufig ersetzen. Standardassets zuerst kostenlos suchen; nötige Lücken über Meshy.ai nur nach konkretem Auftrag. Original-PNGs und Original-GLB unverändert; Rechte/Plan nicht erfinden.
+Zusätzlicher Projektfokus: Für 3D bleibt die vorhandene GLB Prototyp, nur Running/Walking strukturell nachgewiesen; fehlende Clips vorläufig ersetzen. Spätere Weltassets in Phasen 06/07: Standardassets zuerst kostenlos suchen, nötige Meshy-Lücken nur nach konkretem Auftrag. Davon begrenzt ausgenommen sind notwendige HTML-Portfolio-Assets schon während Phase 01. Illustrationen von skalierbaren SVG/CSS-Elementen und echten React/HTML/CSS-Komponenten trennen, kein starres UI-Gesamtbild. Bestehende geeignete Motive bevorzugt wiederverwenden; 18 Bildmotiv-Kandidaten sind keine Pflichtdateizahl. Neue Einzelproduktion und Integration brauchen gesonderte Beauftragung/Freigabe, neue Mockup-Entwürfe drei Varianten. Original-PNGs/GLB unverändert; Herkunft, Rechte und technische Eignung vor Verwendung belegen, nicht erfinden.
 
 Arbeitsauftrag:
 1. Prüfe Datei, Herkunft und Rechteangaben; keine Lizenz aus Dateiname oder KI-Herkunft ableiten.

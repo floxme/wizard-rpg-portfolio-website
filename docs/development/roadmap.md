@@ -1,6 +1,6 @@
 # Projektphasen
 
-Stand: 17.10.2026. Von Florian bestätigte Reihenfolge. Phase 00 ist technisch initialisiert und dokumentiert; die echte Browserabnahme bleibt offen. Phase 01 bis 08 sind noch nicht umgesetzt. Fachliche Ziele bleiben Sollzustand, nicht automatisch Fortschrittsnachweise.
+Stand: 17.10.2026. Von Florian bestätigte Reihenfolge. Phase 00 ist im dokumentierten Umfang abgeschlossen; der Devmodus-Routenbefund und vollständige Browserabnahmen bleiben offen. Phase 01 bis 08 sind noch nicht umgesetzt. Fachliche Ziele bleiben Sollzustand, nicht automatisch Fortschrittsnachweise.
 
 Jede Phase in kleine überprüfbare Aufträge teilen; nur unmittelbar relevante Fragen stellen. Zugänglichkeit, DE/EN, Fehlerfälle und Performance von Anfang an berücksichtigen. Kein ungefragtes Commit/Push/Deployment. Fehlende finale Assets blockieren den funktionalen Prototyp nicht.
 
@@ -28,9 +28,28 @@ Der [zentrale Testworkflow](testing-workflow.md) ist verbindlich. Der eigenstän
 
 Geeignete Regressionstests und ergänzende Browserautomation passend zur tatsächlichen Funktion/Phase einführen. Neue Testframeworks, GitHub Actions oder Runner sind keine Voraussetzung für den Windows-Vorbereitungsschritt und dürfen Phase 01 nicht unnötig verzögern. Automatische Funktionsergebnisse und visuelle Nutzerfreigabe getrennt führen.
 
+## Phase 01 – vorgeschlagene operative Unterteilung
+
+Phase 01 ist **nicht implementiert**. Verbindlich beschlossen sind das [Routing-Soll](../context/portfolio-and-content.md#sprachen-und-routen), die [begrenzte frühe Portfolio-Assetstrategie](../context/assets.md#portfolio-assets-während-phase-01) und der [gemeinsame Inhaltsschritt](../context/portfolio-and-content.md#echte-inhalte-innerhalb-von-phase-01). Die folgende Nummerierung und genaue Ausgestaltung sind dagegen **vorgeschlagen**, keine vollständige Freigabe von acht Implementierungsaufträgen. Jeder tatsächliche Auftrag wird gesondert abgegrenzt; die Hauptphasen 00–08 ändern sich nicht.
+
+| Vorschlag | Arbeitspaket | Planungsgrenze |
+| --- | --- | --- |
+| 01.1 | Routing und technisches Fundament | Beschlossene Basis-URLs erhalten; Bereichs-/Detail-URLs vor Implementierung gesondert festlegen. Devmodus-Befund und Deep Links berücksichtigen. |
+| 01.2 | Datenmodelle und Internationalisierung | Gemeinsame typisierte Inhalte und DE/EN; zunächst klar gekennzeichnete Entwicklungsplatzhalter. |
+| 01.3 | Designsystem und gezielte Asset-Erstellung | Elf Portfolio-Referenzen und Planungsinventar nutzen; jede Einzelproduktion und Integration gesondert beauftragen/freigeben. |
+| 01.4 | About Me und Interests | Bestätigte Struktur, austauschbare Inhalte und vorläufige Medien; keine erfundenen persönlichen Fakten. |
+| 01.5 | Skilltree | Tatsächliche Kompetenzen, Tools & Methods und Career; Werte und Zeiträume erst gemeinsam bestätigen. |
+| 01.6 | Projects und Contact | Tatsächlicher Projektstand und bestätigte Kontaktmöglichkeiten; keine erfundenen Projekte, URLs oder Medien. |
+| 01.7 | Echte Portfolio-Inhalte gemeinsam erarbeiten | Eigener kontrollierter Inhaltsschritt in der fachlich festgelegten Reihenfolge; keine Vorwegnahme der Releasefreigabe. |
+| 01.8 | Integration, Tests und visuelle Abnahme | Automatisierte Nachweise und echte Windows-/Opera-Prüfung getrennt; visuelle Freigabe durch Florian. |
+
+Maßgebliche visuelle Planung: [Portfolio-Asset-Inventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md), 18 Bildmotiv-Kandidaten plus weitere Designasset-, Komponenten- und Medienkategorien; keine verpflichtende Dateizahl und kein freigegebener Produktionssatz. Vorhandene geeignete Motive bevorzugt wiederverwenden. Die begrenzte Ausnahme erlaubt notwendige HTML-Portfolio-Assets während Phase 01; sie verlagert **keine** finale Welt-, Charakter- oder Animationsproduktion aus Phasen 06/07. Phase 08 bleibt für Inhaltsfinalisierung, Qualität und Releasevorbereitung bestehen; der frühe Inhaltsschritt ersetzt diese Prüfung nicht.
+
+Der nächste geplante fachliche Schritt ist die **detaillierte Spezifikation von B01 Fantasy-Header, B02 Sidebar-Illustration, D01 Arkaner Kompassrose und D02 Fantasy-Rahmensystem**. Noch keine Spezifikation, Produktion, Assetintegration oder Phase-01-Implementierung durch diesen Dokumentationsauftrag. Konkrete Produktionsassets sind weiterhin nicht generiert oder visuell freigegeben.
+
 ## Prüftore
 
-Setup: reale Versionen, Build/Export. HTML: direkte Routen, Sprache, Mobil/Tastatur. Welt: Laufwege, Kollisionen, Kamera, früher Pointer-Lock-Test. Interaktionen: vollständige Rückkehr, Positionierung, Abbruch und Timing mit Florian. Robustheit: Settings, Laden, Speicher, Fehler. Erst nach funktionaler Abnahme finale Assetbeschaffung und Integration.
+Setup: reale Versionen, Build/Export. HTML: direkte Routen, Sprache, Mobil/Tastatur. Welt: Laufwege, Kollisionen, Kamera, früher Pointer-Lock-Test. Interaktionen: vollständige Rückkehr, Positionierung, Abbruch und Timing mit Florian. Robustheit: Settings, Laden, Speicher, Fehler. Für finale Welt-, Charakter- und Animationsassets weiterhin erst funktionale Prototypabnahme, dann Phasen 06/07. Die ausdrücklich begrenzte Portfolio-Asset-Ausnahme in Phase 01 ist davon ausgenommen; Einzelaufträge, Rechte-/Technikprüfung und visuelle Freigabe bleiben erforderlich.
 
 Assetbeschaffung: vorhandene Lösungen/Grundgeometrie → kostenlose passende Pakete → Meshy nur für notwendige verbleibende Lücken. Kein Abo oder Kauf automatisch beschlossen. Finales Timing und visuelle Qualität im Browser gemeinsam beurteilen.
 

@@ -1,6 +1,6 @@
 # Portfolio, Inhalte und Sprache
 
-Stand: 16.10.2026. Inhaltliche Quelle; Layout und Navigation in [ui-and-navigation.md](ui-and-navigation.md).
+Stand: 17.10.2026. Inhaltliche Quelle; Layout und Navigation in [ui-and-navigation.md](ui-and-navigation.md).
 
 ## Öffentliche Darstellung
 
@@ -44,6 +44,17 @@ The Arcane Tower ist das erste bestätigte persönliche Projekt. Galerie erweite
 
 Nur tatsächlichen Entwicklungsstand nennen. Kein Video-Play-Button ohne Video, keine aktiven Links ohne verfügbares Ziel. Das GitHub-Repository ist inzwischen öffentlich; die frühere Vorgabe „Quellcode derzeit privat“ ist damit überholt. Der öffentliche Repository-Zugang belegt keine bereits implementierten Quellcode-Links im Wegschild oder Projektdetail. Nur bestätigte, tatsächlich funktionierende Links veröffentlichen; keine Repository-URL erfinden. Öffentliches GitHub-Profil darf unabhängig davon unter Kontakt verlinkt sein. Kontakt: mailto, GitHub, optional bestätigtes LinkedIn; keine erfundenen Adressen oder Verfügbarkeitsangaben.
 
+## Echte Inhalte innerhalb von Phase 01
+
+Beschlossen ist ein eigener kontrollierter Befüllungsschritt innerhalb von Phase 01, gemeinsam mit Florian und in dieser Reihenfolge:
+
+1. About Me: General und die sechs Interests.
+2. Skilltree: tatsächliche Kompetenzen, Tools & Methods und Career Progression.
+3. Projects: insbesondere der tatsächliche Stand von The Arcane Tower.
+4. Contact: bestätigte Kontaktmöglichkeiten und Profile.
+
+Die technische Struktur darf zunächst mit ausdrücklich gekennzeichneten Entwicklungsplatzhaltern entstehen. Persönliche Angaben, Skilllevel, Berufserfahrungen, Projekte, Technologien, Kontaktdaten und Medien erst nach Bestätigung übernehmen; nichts aus Mockup-Beispielen als wahr ableiten. Freigabe von Inhalt, Bildmotiv und technischer Implementierung getrennt halten. Dieser frühe Inhaltsschritt ersetzt nicht Phase 08 mit Inhaltsfinalisierung, Qualität und Releaseprüfung. Die Nummerierung 01.1–01.8 in der [Roadmap](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung) ist ein operativer Vorschlag, kein Satz freigegebener Implementierungsaufträge.
+
 ## Gemeinsame Daten
 
 Lokale strukturierte typisierte Inhalte mit stabilen sprachunabhängigen IDs und getrennten Übersetzungen. Keine React-Abhängigkeit im fachlichen Inhaltsmodell. HTML, Kristall, Schmiede und Garten verwenden dieselben Daten. Inhaltsfreigabe getrennt von Designfreigabe; fehlende Werte als Entwicklungsplatzhalter oder offen führen. Keine erfundenen Daten veröffentlichen.
@@ -52,11 +63,21 @@ Lokale strukturierte typisierte Inhalte mit stabilen sprachunabhängigen IDs und
 
 Deutsch mit du, freundlich/professionell; Englisch sinngemäß. Alle UI-Texte, Status-, Fehler-, Steuerungs- und zugänglichen Labels übersetzen.
 
-- `/`: Sprachwahl und beide Einstiege; gespeicherte Sprache vorauswählen, kein erzwungener Redirect.
-- `/de-DE/`: Deutsch; `/en-EN/`: Englisch. URL-Schreibweise bleibt ausdrücklich erhalten.
-- Direkte URL hat Vorrang vor gespeicherter Sprache.
-- Startscreen erlaubt Sprache und Einstellungen, Welt oder direktes vollständiges HTML-Portfolio.
+**Verbindlich beschlossenes Routingziel; Startscreens und Portfolio-Unterpfade noch nicht implementiert:** Die bisherige allgemeine Formulierung zu beiden Einstiegen an `/` wird präzisiert; Root bleibt ausschließlich die vorgeschaltete Sprachauswahl ohne automatische Weiterleitung.
+
+| URL | Beschlossene Funktion |
+| --- | --- |
+| `/` | Sprachauswahl; ein Sprachlink führt zum lokalisierten Startscreen. Eine vorhandene gespeicherte Präferenz ist vorausgewählt, löst aber keinen automatischen Redirect aus. |
+| `/de-DE/` | Deutscher Startscreen mit „Welt betreten“ und „Portfolio direkt öffnen“. |
+| `/en-EN/` | Englischer Startscreen mit denselben beiden Einstiegsmöglichkeiten. |
+| `/de-DE/portfolio/` | Eigenständiger deutscher HTML-Portfolio-Unterpfad, ohne Welt-/WebGL-Voraussetzung. |
+| `/en-EN/portfolio/` | Eigenständiger englischer HTML-Portfolio-Unterpfad, ohne Welt-/WebGL-Voraussetzung. |
+
+Die konkreten Unterseiten-URLs für About Me, Skilltree, Projects und Contact sind vor ihrer jeweiligen Implementierung gesondert festzulegen. Aus den Bereichsnamen oder dem Asset-Inventar keine weiteren Slugs ableiten. Die direkte Sprachroute hat Vorrang vor einer gespeicherten Sprachpräferenz. Startscreen-Zugang zu Sprache und Einstellungen bleibt erhalten.
+
 - Sprachwechsel erhält aktive Inhalts-ID und während derselben Sitzung Weltposition/Interaktionskontext.
 - URL-Segment `en-EN` intern auf `en` abbilden; geeignete Codes für HTML-lang, hreflang und Formatierung verwenden.
 
-Exakte Unterpfade beim Setup festlegen und mit statischem Export, Deep Links, Reload und Browserhistorie prüfen. Kein unbeabsichtigter Welt-Remount beim Sprachwechsel.
+Die festgelegten Portfolio-Basispfade und später beschlossenen Unterseiten mit statischem Export, direktem Aufruf, Deep Links, Reload und Browserhistorie prüfen. Der bekannte [Devmodus-Routenbefund](../development/open-items.md#windows-html-test-und-devmodus-routenbefund--17102026) bleibt offen und ist auch für zusätzliche Pfade zu berücksichtigen; ein erfolgreicher Build ist keine Devmodus-Abnahme. Kein unbeabsichtigter Welt-Remount beim Sprachwechsel. Direktes HTML-Portfolio und späteres Kristall-Interface verwenden dieselben Komponenten und typisierten Inhalte; keine zweite unabhängige Portfolio-Implementierung.
+
+Tatsächlich vorhanden bleiben Phase-00-Sprachwahl und zwei lokalisierte HTML-Platzhalter. Lokalisierte Startscreens mit beiden Aktionen sowie `/portfolio/`-Seiten sind durch diese Dokumentation weder implementiert noch getestet. Visuelle Produktionsplanung: [Assetquelle](assets.md#portfolio-assets-während-phase-01) und [Portfolio-Asset-Inventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md).

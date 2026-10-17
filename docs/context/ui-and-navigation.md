@@ -1,12 +1,18 @@
 # UI und Navigation
 
-Stand: 16.10.2026. Funktionale Quelle für Oberflächen und Navigation; Bildinterpretationen im [Designindex](../design/README.md). Gameplay-Abläufe ausschließlich in [gameplay-and-interactions.md](gameplay-and-interactions.md), Inhaltshierarchie in [portfolio-and-content.md](portfolio-and-content.md).
+Stand: 17.10.2026. Funktionale Quelle für Oberflächen und Navigation; Bildinterpretationen im [Designindex](../design/README.md). Gameplay-Abläufe ausschließlich in [gameplay-and-interactions.md](gameplay-and-interactions.md), Inhaltshierarchie in [portfolio-and-content.md](portfolio-and-content.md).
 
 ## Gemeinsame Oberfläche
 
 Ein gemeinsamer Portfolio-Rahmen mit Header, Navigation, Seitenkopf und Inhaltsbereich für direkten HTML-Einstieg und Welt-Portfolio. Einstiegskontext steuert nur Rückkehr/Schließen, nicht eine zweite Kopie aller Seiten.
 
 Design-Tokens für Farbrollen, Abstände, Typografie, Rahmen, Fokus und Effekte; konkrete Werte anhand der Referenzen und Lesbarkeit wählen. Wiederverwendbare Fantasy-Karten, Buttons, Dialograhmen, Statusanzeigen und Inhaltsmodule. Dekorative Rahmen dürfen keine Klicks abfangen. Echte Links/Buttons, keine PNG-Oberfläche als Ersatz für Interaktion. Icons und Bilder unabhängig von Daten austauschbar; gleiche Navigationspunkte verwenden dieselben Icons.
+
+## Einstieg und visuelle Portfolio-Assets
+
+Beschlossenes Routingziel: `/` bleibt die Sprachauswahl ohne automatischen Redirect. Noch nicht implementiert sind lokalisierte Startscreens unter `/de-DE/` und `/en-EN/` mit Welt- und direktem Portfolio-Einstieg sowie das eigenständige HTML-Portfolio unter `/de-DE/portfolio/` beziehungsweise `/en-EN/portfolio/`. Verbindliche URL-Zuständigkeit und noch offene Bereichs-Slugs: [Portfolio und Inhalte](portfolio-and-content.md#sprachen-und-routen). Der direkte HTML-Zugang behält interne Navigation und Start-Link ohne Welt-X. Die spätere Weltansicht verwendet denselben Portfolio-Rahmen und Inhalt, keine zweite Implementierung.
+
+Für die notwendige HTML-Gestaltung gilt die begrenzte [Phase-01-Asset-Ausnahme](assets.md#portfolio-assets-während-phase-01): Illustrationen getrennt von skalierbaren SVG-/CSS-Ornamenten und echten React-/HTML-/CSS-Komponenten planen. Fantasy-Hintergründe, Header-/Sidebar-Illustrationen, Charakter-/Interessenbilder, Rahmen, Schriften, Icons und wiederverwendbare Karten schrittweise im beauftragten Umfang vorbereiten, freigeben und integrieren. Kein ganzes Mockup als starres UI-Bild und keine eingebrannten Navigationstexte. Die elf Portfolio-PNGs bleiben das visuelle Ziel; [Inventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md) ist Planung, kein freigegebener Produktionssatz. Konkrete Assets und deren visuelle Freigabe stehen aus.
 
 ## Navigation und Hierarchie
 

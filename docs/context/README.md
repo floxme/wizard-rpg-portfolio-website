@@ -1,6 +1,6 @@
 # Kontextübersicht
 
-Stand: 17.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00 ist implementiert; der native Ubuntu-Checkout ist eingerichtet und im dokumentierten Umfang erneut geprüft. Eine vollständige Browserabnahme, Portfoliofunktionen und 3D-Welt stehen noch aus.
+Stand: 17.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00 ist implementiert; der native Ubuntu-Checkout ist eingerichtet und im dokumentierten Umfang erneut geprüft. Phase 00 ist im dokumentierten Umfang abgeschlossen; der bekannte Devmodus-Befund bleibt offen. Vollständige Browserabnahme, Phase-01-Portfolio und 3D-Welt stehen noch aus.
 
 ## Lesen nach Aufgabe
 
@@ -15,6 +15,7 @@ Stand: 17.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00
 | [accessibility-and-performance.md](accessibility-and-performance.md) | Zugänglichkeit, Laden, Qualität, Fehler und Prüfungen                                                  |
 | [assets.md](assets.md)                                               | Tatsächlicher Bestand, Prototyp, Beschaffung und Integration                                           |
 | [privacy-security-and-licenses.md](privacy-security-and-licenses.md) | Vertraulichkeit, Rechte und Veröffentlichung                                                           |
+| [Portfolio-Asset-Inventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md) | Planungsquelle für 18 Bildmotiv-Kandidaten sowie Designassets, Komponenten und Medienplätze; keine Einzelproduktionsfreigabe |
 | [Designindex](../design/README.md)                                   | Alle 29 freigegebenen PNGs und Referenzzuständigkeiten                                                 |
 | [Entscheidungen](../decisions/decision-log.md)                       | Historische und aktuelle Entscheidungen                                                                |
 | [Roadmap](../development/roadmap.md)                                 | Phasen und Prüftore                                                                                    |
@@ -28,6 +29,8 @@ Stand: 17.10.2026. Das minimale statisch exportierbare Grundgerüst von Phase 00
 Aktuelle ausdrückliche Nutzerentscheidung > aktueller zentraler Fachkontext > zugeordnete Designinterpretation. PNGs definieren das visuelle Ziel; Detailreferenzen konkretisieren ihren Bereich. Bei echtem Widerspruch nicht automatisch Inhalte kombinieren, sondern nachfragen. Persönliche Angaben und Zahlen innerhalb der PNGs bleiben ungeprüfte Beispiele.
 
 Alle 29 vorhandenen PNGs sind ausdrücklich ausgewählt. Die frühere Beschränkung auf zwei Character Sheets ist abgelöst. Mockup-READMEs erklären Bilder; zentrale Fachregeln werden verlinkt, nicht unabhängig neu spezifiziert. Das Entscheidungsprotokoll erklärt Änderungen, historische Einträge sind keine konkurrierenden aktuellen Regeln.
+
+Für den Phase-01-Abgleich gelten [Portfolio und Inhalte](portfolio-and-content.md#sprachen-und-routen) als URL-/Inhaltsquelle, [Assets](assets.md#portfolio-assets-während-phase-01) als Quelle der begrenzten frühen Portfolio-Asset-Ausnahme und [Roadmap](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung) als Quelle der nur vorgeschlagenen Unterpakete. Die Hauptphasen 00–08 bleiben bestehen. Das Inventar unterscheidet bestätigte Strategie, vorgeschlagene operative Unterteilung und offene Produktionsfreigaben; konkrete Produktionsassets und Implementierungen sind nicht freigegeben oder vorhanden allein durch ihre Auflistung.
 
 ## Statusbegriffe
 

@@ -10,6 +10,14 @@ Character-Designsheet: Gesamtidentität; Produktionssheet: Ansichten/Teile; Staf
 
 Funktionale Quellen: [Gameplay](../context/gameplay-and-interactions.md), [UI](../context/ui-and-navigation.md), [Inhalte](../context/portfolio-and-content.md), [Welt](../context/world-and-design.md), [Assets](../context/assets.md). Relevante verbleibende Widersprüche vor Umsetzung fragen.
 
+## Portfolio-Assetplanung in Phase 01
+
+Die elf Portfolio-PNGs unten bleiben verbindliche visuelle Referenzen; sie sind kein freigegebener Produktionsasset-Satz. Maßgebliche Planungsquelle für benötigte Einzelassets ist das vorhandene [Portfolio-Asset-Inventar](asset-inventory/arcane-portfolio-asset-inventar-phase-01.md): 18 Bildmotiv-Kandidaten plus weitere Designasset-, Komponenten- und Medienkategorien, keine verpflichtende Zahl neu zu generierender Dateien.
+
+Die [frühe Portfolio-Assetstrategie](../context/assets.md#portfolio-assets-während-phase-01) ist bestätigt: notwendige Illustrationen, skalierbare SVG-/CSS-Elemente und echte UI-Komponenten bereits während Phase 01 schrittweise, jeweils mit gesondertem Produktionsauftrag sowie Rechte-/Technik-/Sichtfreigabe. Bestehende geeignete Motive bevorzugt wiederverwenden, keine vollständige UI als starres Bild. Neue Mockup-Entwürfe weiterhin mit drei Varianten und ausdrücklicher Auswahl; keine Änderung oder automatische Ausschneidung der Original-PNGs.
+
+Startscreen und Portfolio haben unterschiedliche Referenzzuständigkeiten: `ui-app-start-screen.png` für die lokalisierten Startscreens; die elf Portfolio-PNGs für das eigenständige HTML-/spätere Kristall-Portfolio. Fachliche URLs: [Portfolio und Inhalte](../context/portfolio-and-content.md#sprachen-und-routen). Konkrete Produktionsassets sind noch nicht generiert oder visuell freigegeben. Phasen 06/07 für spätere Welt-/Charakter-/Animationsassets bleiben erhalten; [Roadmap](../development/roadmap.md#phase-01--vorgeschlagene-operative-unterteilung).
+
 ## Referenzinventar
 
 Alle Pfade in der Tabelle relativ zum Projektroot.

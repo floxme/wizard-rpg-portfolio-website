@@ -1,6 +1,6 @@
 # Offene Punkte und Nachweise
 
-Stand: 17.10.2026. Phase 00 ist technisch initialisiert und dokumentiert. Die folgenden Restaufgaben und Nachweise sind ausdrücklich vom beschlossenen, noch nicht implementierten Produktumfang getrennt. Fragen gezielt vor dem betroffenen Schritt stellen.
+Stand: 17.10.2026. Phase 00 ist im dokumentierten Umfang abgeschlossen; die offenen technischen Befunde bleiben erhalten. Die folgenden Restaufgaben und Nachweise sind ausdrücklich vom beschlossenen, noch nicht implementierten Produktumfang getrennt. Fragen gezielt vor dem betroffenen Schritt stellen.
 
 ## Priorisierte technische Aufgaben
 
@@ -44,21 +44,36 @@ Die drei Einstiegspunkte wurden laut Florian bereits im Browser dargestellt. Fü
 - Nur benötigte, freigegebene Modelle samt Abhängigkeiten tracken. Obsolete Modelle erst nach Nutzungsprüfung und ausdrücklicher Freigabe gezielt bereinigen; zentrale [Git-/Modellregel](../context/architecture.md#git-und-3d-modelle) beachten.
 - Modellintegration, praktische Animation, Performance und Veröffentlichungsrechte sind weiterhin offen.
 
+## Phase 01 – beschlossene Grundlage und offene Freigaben
+
+Beschlossen, noch nicht implementiert: [Root-Sprachwahl → lokalisierter Startscreen → eigenständiges HTML-Portfolio](../context/portfolio-and-content.md#sprachen-und-routen), [notwendige Portfolio-Assets bereits während Phase 01](../context/assets.md#portfolio-assets-während-phase-01) und [eigener gemeinsamer Inhaltsschritt](../context/portfolio-and-content.md#echte-inhalte-innerhalb-von-phase-01). Das tatsächliche Repository enthält weiterhin nur die Phase-00-Sprachwahl und zwei lokalisierte Platzhalter; keine `/portfolio/`-Route und keine Produktionsassets. Der Dokumentationsabgleich ist kein neuer Funktions- oder Browsernachweis.
+
+Offen bleiben:
+
+- Bereichs-/Detail-URLs für About Me, Skilltree, Projects und Contact vor der jeweiligen Implementierung gesondert festlegen; die beiden Portfolio-Basispfade sind bereits beschlossen.
+- Nummerierung und Ausgestaltung der [acht vorgeschlagenen Unterpakete](roadmap.md#phase-01--vorgeschlagene-operative-unterteilung) sowie tatsächliche Implementierungsaufträge; keine pauschale Freigabe aller Pakete.
+- Als nächster fachlicher Schritt die detaillierte Spezifikation von B01/B02/D01/D02; noch keine Erstellung/Generierung oder visuelle Produktionsfreigabe. [Planungsinventar](../design/asset-inventory/arcane-portfolio-asset-inventar-phase-01.md) vorhanden, 18 Bildmotiv-Kandidaten ohne Pflichtdateizahl. Seine Abschnitte 7/8 unterscheiden bestätigte Strategie und vorgeschlagene operative Pakete; Einzelproduktion bleibt separat freizugeben.
+- Tatsächliche Herkunft, Lizenz/Nutzungsrechte und technische Eignung jedes verwendeten Produktionsassets prüfen und dokumentieren; geeignete vorhandene Motive bevorzugt wiederverwenden. Neue Mockups weiterhin mit drei Varianten und ausdrücklicher Auswahl.
+- Echte Inhalte kontrolliert mit Florian erarbeiten und bestätigen, zunächst Platzhalter. Phase 08 behält Inhaltsfinalisierung/Releaseprüfung; Phasen 06/07 behalten spätere Welt-/Charakter-/Animationsassetarbeit.
+- Neuen Portfolio-Unterpfad und später beschlossene Deep Links in Devmodus und statischem Export prüfen. Der bekannte `generateStaticParams()`-/`output: export`-Befund bleibt ungeklärt und ohne dauerhaft bestätigten Fix; keine neue Ursache aus der Routingplanung ableiten.
+
+Phase 01 ist weiterhin nicht implementiert. Dieser Auftrag führt keine dieser offenen Produktions-, Spezifikations- oder Implementierungsaufgaben aus.
+
 ## Fachliche Fragen nach Phase
 
 | Zeitpunkt                | Offene Entscheidung / Prüfung                                                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Phase 00 – Restprüfungen | Devmodus-Routenbefund nach Windows-Grundtest, vollständige Browser-/Accessibility-Abnahme, Performance-Messungen, nächster Commit durch Florian und priorisierte ESLint-10-Migration; nativer Checkout und grundlegende Clone-Prüfung abgeschlossen, Quellen und Grenzen unten. |
-| Phase 1                  | Konkrete statische Unterpfade/History, Scrollbewahrung, responsive Breiten, Übersetzungsschlüssel.                                                                        |
+| Phase 1                  | Portfolio-Basispfade beschlossen; konkrete Bereichs-/Detail-URLs, History/Scrollbewahrung, responsive Breiten, Übersetzungsschlüssel, Einzelassets und gemeinsame Inhaltsbestätigung noch offen. Unterpakete 01.1–01.8 vorgeschlagen.                                                                        |
 | Phase 2                  | Maßstab, Kameraabstand, Kollisions-/Rampenparameter, Grenzen, Durchgänge, begehbare Flächen; Prototypmodell laden/abspielen.                                              |
 | Phase 3                  | Kristall-Anker und sichere Annäherung, Drehung, Animationstiming inklusive Teleport/Positionierung; etwa eine Sekunde nur Startvorschlag.                                 |
 | Phase 3                  | Ein-Klick-Pointer-Lock-Rückkehr in Zielbrowsern; Fokus-/Tabverlust und Fehlerpfade.                                                                                       |
 | Phase 3–4                | Details verschachtelter Weltobjekt-/Portfolio-Rückkehr, Browser-Zurück; keine erneute Entscheidung über kristallfreien „Mehr erfahren“-Einstieg.                          |
 | Phase 4                  | Minimap-Skalierung/Rotation für erkennbare Turmbewegung, weitere Defaultwerte und Schließen nach Übernehmen.                                                              |
 | Phase 4–5                | Browser-/Gerätematrix, tatsächliche Leistungs-/Ladebudgets und automatische Qualitätsschwellen.                                                                           |
-| Phase 6–7                | Konkrete kostenlose Assetkandidaten und Rechte; Meshy-Funktionen/Plan bei verbleibendem Bedarf; keine Kaufpflicht.                                                        |
-| Phase 7                  | Finale Modell-/Stabdetails, fehlende Clips, Schriften, Icons, Audio, Illustrationen; Performance und Nutzungsrechte.                                                      |
-| Phase 8                  | Bestätigte Skillnamen/-stufen, Bio, Zeiträume, Favoriten, DE/EN-Texte, E-Mail/GitHub/optionales LinkedIn, Verfügbarkeit.                                                  |
+| Phase 6–7                | Spätere Welt-/Charakter-/Animationsassets und weiterer Bedarf: konkrete kostenlose Kandidaten/Rechte, Meshy-Funktionen/Plan bei Lücken; keine Kaufpflicht. Begrenzte Portfolio-Ausnahme in Phase 01 bleibt bestehen.                                                        |
+| Phase 7                  | Finale Welt-/Modell-/Stabdetails, fehlende Clips und weitere benötigte Medien; Performance/Rechte. Bereits freigegebene Portfolio-Assets aus Phase 01 bei Eignung wiederverwenden.                                                      |
+| Phase 8                  | Inhaltsfinalisierung und Releaseprüfung der bereits in Phase 01 gemeinsam erarbeiteten Angaben; offene/aktualisierte Fakten, DE/EN, Kontakte und Verfügbarkeit erneut bestätigen.                                                  |
 | Vor Release              | Domain/Hosting, reale Hostinglogs, erforderliche rechtliche Inhalte, Rechte/Attribution und reale Browsernachweise.                                                       |
 
 ## Optionale Erweiterungen nach Projektabschluss
@@ -81,7 +96,7 @@ Nach vollständiger Fertigstellung und Abnahme der Webanwendung kann geprüft we
 
 Kein Springen, keine Box-Sprünge, kein Kampf/Schaden; vereinfachte Rampen/Kollisionen mit sicheren Grenzen. Automatische Positionierung nur für Kristall, danach dort bleiben. Timing offen statt harter Sekundengrenze. B teleportiert und aktiviert ohne E. Aufgaben zählen erst nach erfolgreicher Interaktion/Inhaltsöffnung. „Mehr erfahren“ ohne Kristallteleport. Direkter HTML-Zugang ohne Welt-X. Settings-Entwurf mit Übernehmen/Verwerfen. HP/Mana dekorativ. Außen-Minimap mit auch innen beweglichem Marker, keine Innenraumkarte.
 
-Stack beschlossen; installierte Grundgerüst-Versionen in [architecture.md](../context/architecture.md), spätere 3D-Versionen noch zu prüfen. Erst funktionaler Prototyp, dann finale Assets. Kostenlose passende Standardassets zuerst, Meshy nur für nötige Lücken. Keine automatischen Käufe, Commits, Pushes oder Deployments.
+Stack beschlossen; installierte Grundgerüst-Versionen in [architecture.md](../context/architecture.md), spätere 3D-Versionen noch zu prüfen. Für Welt-/Charakter-/Animationsassets erst funktionaler Prototyp, dann Phasen 06/07; notwendige HTML-Portfolio-Assets bereits schrittweise in Phase 01 gemäß [Assetquelle](../context/assets.md#portfolio-assets-während-phase-01). Kostenlose passende Standardassets zuerst, Meshy nur für nötige Lücken. Keine automatischen Käufe, Commits, Pushes oder Deployments.
 
 ## Tatsächlicher Nachweisstand
 
